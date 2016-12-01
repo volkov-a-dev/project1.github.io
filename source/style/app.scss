@@ -2,4 +2,9 @@ body {
   margin: 0;
 }
 
+@import 'common/main';
 @import 'common/greating';
+@import 'common/nav';
+@import 'common/icon';
+@import 'common/header';
+@import 'common/footer';
