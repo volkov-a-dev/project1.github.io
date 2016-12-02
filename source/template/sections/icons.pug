@@ -1,6 +1,4 @@
-ul.icons__social
-    each social in ['vk', 'github', 'in' ]
-        li.social__item
-            a(class=`socials__link socials__link_${social}` href="#")
-                span= social
-                //-img.socials__link-pic(src=`/img/icons/${social}.svg`, alt='social icons')
+each social in ['vk', 'github', 'in' ]
+    a(class=`socials__link socials__link_${social}` href="#")
+        svg.icon
+            use(xlink:href="assets/img/sprite.svg#" + `${social}`)

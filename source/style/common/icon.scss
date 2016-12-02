@@ -1,3 +1,6 @@
+.socials__link {
+  text-decoration: none;
+}
 .icons__social {
   display: inline-block;
   padding-right: 40px;
@@ -7,7 +10,22 @@
     display: inline;
   }
   a {
-    text-decoration: none;
+
     color: rgba(255, 255, 255, 0.5);
   }
+}
+
+body {
+  margin: 0;
+}
+
+.box {
+  margin: 50px auto;
+}
+
+.traingle .left{
+  fill: #4CAF50;
+}
+.traingle .right{
+  fill: #ccc;
 }

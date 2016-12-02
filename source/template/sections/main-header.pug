@@ -1,8 +1,19 @@
 .header__content
     .header__background
-    include icons
+        include icons
+        include hamburger-menu
 
-    include hamburger-menu
+    .header__background-portfolio
+        include ./personal-info
+    //-.header__background-svg-block
+    //-    //svg.portfolio__text-background
+    //-    //    use(xlink:href="assets/img/sprite.svg#portfolio_header")
 
+
+
+    .box__test
+        svg(viewBox="0 0 1000 85" preserveAspectRatio="none" class="traingie")
+            polygon(class="left" points="0,0   0,86   500.8,86   500.8,75.5")
+            polygon(class="right" points="1000,0   1000,86   500,86   500,75.5")
 
 
