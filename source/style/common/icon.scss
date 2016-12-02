@@ -1,4 +1,5 @@
 .icons__social {
+  display: inline-block;
   padding-right: 40px;
 
   .social__item {
@@ -6,6 +7,7 @@
     display: inline;
   }
   a {
+    text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
   }
 }

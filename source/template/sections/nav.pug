@@ -1,9 +1,4 @@
 ul.nav__container
-    li.nav__li
-        a(href="#") Мои работы
-    li.nav__li
-        a(href="#") Обо мне
-    li.nav__li
-        a(href="#") блог
-    li.nav__li
-        a(href="#") Авторизация
+    each navigation in ['Мои работы', 'Обо мне', 'блог', 'Авторизация' ]
+        li.nav__li
+            a(href="#")

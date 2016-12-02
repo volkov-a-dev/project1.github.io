@@ -28,8 +28,6 @@ Getting started:
 4. Добавил таск в gulpfile.js
 
 
->Задачи из google dock
->> Удалил из сборки bower
 
 
->>>Не добавил задачу для eslint -> scsslint 
+>> 
