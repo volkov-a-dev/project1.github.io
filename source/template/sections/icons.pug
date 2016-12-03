@@ -1,4 +1,5 @@
-each social in ['vk', 'github', 'in' ]
-    a(class=`socials__link socials__link_${social}` href="#")
-        svg.icon
-            use(xlink:href="assets/img/sprite.svg#" + `${social}`)
+.social__content
+    each social in ['vk', 'github', 'in' ]
+        a(class=`socials__link socials__link_${social}` href="#")
+            svg.icon
+                use(xlink:href="assets/img/sprite.svg#" + `${social}`)
