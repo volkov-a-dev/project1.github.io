@@ -1,27 +1,43 @@
 extends ../_template
 block variables
     - var title = 'Work page'
+    -
+        var testimonialItem = [
+            {
+                text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
+                name: 'Ковальчук Дмитрий',
+                description: 'Основатель Loftschool',
+                img: '/assets/img/content/dima_testimonial.png'
+
+            },
+            {
+                text: 'Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
+                name: 'Зар Захаров',
+                description: 'Преподаватель',
+                img: '/assets/img/content/zar_testimonial.png'
+
+            }
+        ]
 
 block header
     include  ../sections/main-header
+
+
+
 block content
 
-    .headline__my-work
-        svg(viewBox="0 0 1000 85" preserveAspectRatio="none" class="traingie")
-            polygon(class="left" points="0,0   0,86   500.8,86   500.8,75.5")
-            polygon(class="right" points="1000,0   1000,86   500,86   500,75.5")
+    .headline.headline__my-work
+        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingie")
+            polygon(points="0,17 0,86 500.8,86 500.8,85")
+            polygon(points="1000,18 1000,86 500,86 500,85")
+        .headline__my-work-title
+            +svg('works_header')
+            h2.headline__title-text Мои работы
 
-    include ../sections/title-mid
+    include ../sections/slider
 
-    .box__about-site-schoole
-
-
-    .box__slader-projects
-
-
-    include ../sections/title-mid
 
     include ../sections/testimonials
 
-    include  ../sections/main-contact-form
+
 

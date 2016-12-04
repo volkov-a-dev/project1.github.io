@@ -1,0 +1,37 @@
+.contac__container-form {
+  position: relative;
+  width: 380px;
+  margin: 0 auto;
+  background: url('/assets/img/contact-form-backg.jpg') no-repeat 0 0/cover;
+  padding: 35px 20px 0;
+}
+.form__title {
+  margin-bottom: 40px;
+  display: inline-block;
+  position: relative;
+
+  font-size: 35px;
+  color: #455a64;
+  &:after {
+    content: '';
+    position: absolute;
+    right: -42px;
+    top: 50%;
+    width: 22px;
+    height: 5px;
+    z-index: 1;
+    background: rgba(69, 90, 100, 0.2);
+
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: -42px;
+    top: 50%;
+    width: 22px;
+    height: 5px;
+    z-index: 1;
+    background: rgba(69, 90, 100, 0.2);
+
+  }
+}

@@ -1,36 +1,32 @@
-.social__content{
+.socials__content {
   display: inline-block;
 }
-.socials__link {
+.social__link{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 18px;
+    svg {
+        line-height: 15px;
+        display: inline-block;
+        fill: #fff;
+        fill-opacity: .80;
+      &:hover {
+        fill-opacity: 1;
+      }
+    }
+}
+.nav__hamburger-icons {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
-  margin-right: 20px;
+  svg {
+    line-height: 15px;
+    display: inline-block;
+    cursor: pointer;
+    fill: #fff;
+    fill-opacity: .80;
 
-  &:last-child {
-    margin-right: 0;
+    &:hover {
+      fill-opacity: 1;
+    }
   }
 }
-
-.icons__social {
-  display: inline-block;
-  padding-right: 40px;
-
-  .social__item {
-    list-style: none;
-    display: inline;
-  }
-}
-.icon {
-  line-height: 15px;
-  display: inline-block;
-  width: 32px;
-  height: 20px;
-  fill: #fff;
-  fill-opacity: .80;
-
-
-  &:hover {
-    opacity: 1;
-  }
-}
-

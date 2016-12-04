@@ -1,16 +1,16 @@
 html, body {
   height: 100%;
 }
-.wrapper {
+.contens__all-page{
   height: auto;
   min-height: 100%;
 
-  .maincontent {
-    padding-bottom: 140px;
+  .contens__page-padding-bottom {
+    padding-bottom: 141px;
   }
 }
-.footer {
 
+.footer {
   height: 141px;
   margin-top: -141px;
 }

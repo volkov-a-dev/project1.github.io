@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-}
+
+@import 'core/_core';
 
 @import 'common/main';
 @import 'common/header';
-@import 'common/footer';
-@import 'common/greating';
-@import 'common/nav';
-@import 'common/headline-my-work';
-@import 'common/hamburger-menu';
 @import 'common/icon';
+@import 'common/hamburger-menu';
+@import 'common/nav';
+@import 'common/personal-info';
+@import 'common/headline-my-work';
+@import 'common/slider';
+@import 'common/testimonials';
+@import 'common/main-contact-form';
+@import 'common/footer';
+
+@import 'common/greating';
+
+
+
+
 

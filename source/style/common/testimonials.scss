@@ -1,0 +1,46 @@
+.testimonials__conteiner {
+  background: url('/assets/img/footor-bg.png') no-repeat 0 0;
+  background-size: cover;
+  padding-bottom: 155px;
+}
+.testimonials__items {
+  width: 780px;
+  margin: 0 auto 70px;
+  display: flex;
+  flex-direction: row;
+}
+.testimonial__item{
+  width: 50%;
+  margin-right: 20px;
+  padding-top: 55px;
+  background: url('/assets/img/quotes.png') no-repeat 0 0;
+
+
+  &-text {
+    margin-bottom: 25px;
+  }
+  &-user {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    &-photo {
+      margin-right: 20px;
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      border-radius: 50%;
+      text-align: center;
+    }
+  }
+
+}
+
+.testimonial__item-info-name {
+  color: #20b5a1;
+  font-weight: bold;
+}
+.testimonial__item-info-description{
+  color: #20b5a1;
+  font-weight: 400;
+}

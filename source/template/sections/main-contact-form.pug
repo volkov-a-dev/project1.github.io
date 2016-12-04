@@ -1,9 +1,10 @@
-.form__container
-    form.contac__body-form(name="contact-me", method="post")
-        .form__container-input
-            span.label title
-            input(type="text", name="title")
+form.contac__container-form
+    .form__inner.form__inner--contact
+        h3.form__title Связаться со мной
+        input.form__input(type=text placeholder='Имя')
+        input.form__input(type=text placeholder='Email')
+        textarea.form__textarea.form__input(placeholder='Ваше сообщение')
+    .form__buttons.form__buttons--contact
+        button(type='submit' class='btn form__btn') Отправить
+        button(type='submit' class='btn form__btn') Отправить
 
-        .form__action-buttons
-            input(type='submit', value='Отправить')
-            input(type='button', value='Очистить')
