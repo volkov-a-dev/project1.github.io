@@ -17,13 +17,13 @@
   }
   &__description_content {
     .user__name-title{
-
+      font-family: $fontMedium;
       color: #fff;
       font-size: 2.186em;
       margin: 0 0 5px;
     }
     .user__subject-info {
-
+      font-family: $robotoLight;
       color: #fff;
       opacity: .8;
       font-size: 1em;

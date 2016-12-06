@@ -2,10 +2,11 @@
   .nav__li{
     list-style: none;
     display: inline;
-    padding-right: 40px;
+    margin-right: 40px;
+    color: #fff;
 
-    a {
-      color: #fff;
+    &:hover {
+      color: $general-color;
     }
   }
 

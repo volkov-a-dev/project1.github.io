@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: $fontMedium;
+
 }
 body {
   margin: 0;
@@ -15,6 +17,7 @@ body {
 .btn__link {
   border-radius: 5px;
   .icon-link {
+
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;

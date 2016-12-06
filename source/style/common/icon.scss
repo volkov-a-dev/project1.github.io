@@ -30,3 +30,18 @@
     }
   }
 }
+.social__link-footor {
+  font-family: $fontMedium;
+  svg {
+    background: #a9acae;
+    border-radius: 50%;
+    border: 1px solid #a9acae;
+    fill: #2f4349;
+
+    &:hover {
+      fill: #fff;
+      border: 0 solid #2f4349;
+      background: #2f4349;
+    }
+  }
+}

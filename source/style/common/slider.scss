@@ -2,8 +2,6 @@
   width: 100%;
   height: 750px;
 
-
-
   &-info {
     float: left;
     width: 50%;
@@ -21,11 +19,12 @@
 
 .slider__title {
   width: 420px;
-  padding-top: 165px;
+  padding-top: 250px;
   margin: 0 auto;
   text-align: center;
 
   &-text {
+    font-family: $bernierReg;
     margin-bottom: 35px;
     font-size: 35px;
     color: #455a64;
@@ -35,7 +34,7 @@
       content: '';
       position: absolute;
       background: rgba(69, 90, 100, 0.2);
-      left: -42px;
+      left: 0;
       top: 50%;
       transform: translateY(-50%);
       width: 22px;
@@ -46,7 +45,7 @@
     &:after {
       content: '';
       position: absolute;
-      right: -42px;
+      right: 0;
       top: 50%;
       transform: translateY(-50%);
       width: 22px;
@@ -59,7 +58,7 @@
     padding: 20px 0;
     margin-bottom: 40px;
     font-size: 16px;
-    color: #00bfa5;
+    color: $general-color;
     text-transform: uppercase;
     position: relative;
     border-top: 3px solid rgba(0, 191, 165, 0.3);

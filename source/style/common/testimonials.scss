@@ -2,6 +2,10 @@
   background: url('/assets/img/footor-bg.png') no-repeat 0 0;
   background-size: cover;
   padding-bottom: 155px;
+
+  .headline {
+    background: rgba(255,255,255, 0.1);
+  }
 }
 .testimonials__items {
   width: 780px;
@@ -17,9 +21,13 @@
 
 
   &-text {
+    font-family: $robotoReular;
     margin-bottom: 25px;
+    line-height: 25px;
+    word-spacing: 2px;
   }
   &-user {
+    font-family: $robotoBold;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -33,14 +41,16 @@
       text-align: center;
     }
   }
-
 }
 
 .testimonial__item-info-name {
-  color: #20b5a1;
+  font-family: $robotoBold;
+  color: $general-color;
   font-weight: bold;
+  padding-bottom: 5px
 }
 .testimonial__item-info-description{
-  color: #20b5a1;
+  color: $general-color;
   font-weight: 400;
 }
+

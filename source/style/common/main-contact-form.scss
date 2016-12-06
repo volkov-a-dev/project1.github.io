@@ -3,31 +3,39 @@
   width: 380px;
   margin: 0 auto;
   background: url('/assets/img/contact-form-backg.jpg') no-repeat 0 0/cover;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+
+.form__inner {
   padding: 35px 20px 0;
 }
-.form__title {
-  margin-bottom: 40px;
-  display: inline-block;
-  position: relative;
 
+.form__title {
+  font-family: $bernierReg;
+  margin-bottom: 40px;
+  position: relative;
   font-size: 35px;
   color: #455a64;
+  text-align: center;
+
   &:after {
     content: '';
     position: absolute;
-    right: -42px;
     top: 50%;
+    left: 0;
     width: 22px;
     height: 5px;
     z-index: 1;
     background: rgba(69, 90, 100, 0.2);
-
   }
+
   &:before {
     content: '';
     position: absolute;
-    left: -42px;
     top: 50%;
+    right: 0;
     width: 22px;
     height: 5px;
     z-index: 1;
@@ -35,3 +43,36 @@
 
   }
 }
+
+.form__input {
+  font-family: $robotoReular;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 1em;
+  border: none;
+  margin-bottom: 20px;
+}
+.form__textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.form__buttons {
+  font-size: 0;
+  .form__btn{
+    font-family: $robotoBold;
+    width: 50%;
+    cursor: pointer;
+
+
+
+    &:first-child{
+      border-right: 2px solid rgba(255,255,255, 0.5);
+    }
+    &:hover {
+      background: rgba(0, 191, 165, 0.3);
+    }
+  }
+}
+
