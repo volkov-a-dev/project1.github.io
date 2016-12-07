@@ -8,36 +8,27 @@ block variables
                 name: 'Ковальчук Дмитрий',
                 description: 'Основатель Loftschool',
                 img: '/assets/img/content/dima_testimonial.png'
-
             },
             {
                 text: 'Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
                 name: 'Зар Захаров',
                 description: 'Преподаватель',
                 img: '/assets/img/content/zar_testimonial.png'
-
             }
         ]
 
 block header
     include  ../sections/main-header
-
-
-
 block content
 
-    .headline.headline__my-work
-        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingie")
-            polygon(points="0,17 0,86 500.8,86 500.8,85")
-            polygon(points="1000,18 1000,86 500,86 500,85")
-        .headline__my-work-title
+    .headline
+        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" ).traingie
+            polygon(points="0,23 0,86 500.8,86 500.8,85")
+            polygon(points="1000,23 1000,86 500,86 500,85")
+        .headline__title
             +svg('works_header')
             h2.headline__title-text Мои работы
 
     include ../sections/slider
 
-
     include ../sections/testimonials
-
-
-

@@ -1,3 +1,7 @@
+.header {
+  position: relative;
+}
+
 .header__content  {
   height: 600px;
   overflow: hidden;
@@ -5,12 +9,12 @@
   background: url('/assets/img/bg.jpg')no-repeat 0 0;
   background-size: cover;
 
-    .header__background {
+    .header__content-control-panel{
       padding:30px 30px 0;
     }
 }
 
-.header__background-portfolio {
+.header__content-title-background {
   position: absolute;
   left:50%;
   transform: translate(-50%,0);
@@ -26,7 +30,7 @@
 .arrow__down {
   position: absolute;
   left: 50%;
-  bottom: 182px;
+  bottom: 70px;
   z-index: 3;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);

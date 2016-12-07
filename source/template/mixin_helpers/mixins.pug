@@ -1,5 +1,5 @@
 mixin svg(id)
-    svg(class='icon icon-' + id)
+    svg(class='icon icon__' + id)
         use(xlink:href='/assets/img/sprite.svg#' + id)
 mixin button(type, href, className, text)
     if type === 'link'
@@ -11,10 +11,11 @@ mixin button(type, href, className, text)
 
 mixin testimonial(data)
     each item in data
-        .testimonial__item
-            .testimonial__item-text #{item.text}
-            .testimonial__item-user
-                .testimonial__item-user-photo: img.testimonial__item-user-photo-img(src=item.img alt=item.name)
-                .testimonial__item-info
-                    .testimonial__item-info-name #{item.name}
-                    .testimonial__item-info-description #{item.description}
+        .testimonial-item
+            .testimonial-item__text #{item.text}
+            .testimonial-item__user
+                .testimonial-item__user-photo
+                    img.testimonial__item-user-photo-img(src=item.img alt=item.name)
+                .testimonial-item__user-info
+                    .testimonial-item__user-name #{item.name}
+                    .testimonial-item__user-description #{item.description}

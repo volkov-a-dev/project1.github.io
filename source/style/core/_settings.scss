@@ -1,43 +1,38 @@
-.icon-arrow_down{
+.icon__arrow_down{
   height: 18px;
 }
-
-.icon-hamburger {
+.icon__hamburger {
   width: 41px;
   height: 36px;
 }
-.icon-vk {
+.icon__vk {
   width: 34px;
   height: 28px;
 }
-.icon-github {
+.icon__github {
   width: 33px;
   height: 23px;
 }
-.icon-in {
+.icon__in {
   width: 33px;
   height: 23px;
 }
-
-.icon-arrow_down {
+.icon__arrow_down {
   width: 32px;
 }
-.icon-vk_round {
+.icon__vk_round {
   width: 36px;
   height:36px;
 }
-
-
-.icon-github_round {
+.icon__github_round {
   width: 36px;
   height:36px;
 }
-.icon-in_round{
+.icon__in_round{
   width: 36px;
   height:36px;
 }
-
-.icon-portf_arrow_down {
+.icon__portf_arrow_down {
   position: absolute;
   top: 0;
   left: 0;
@@ -50,7 +45,7 @@
   height: 27px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
 }
-.icon-portf_arrow_up {
+.icon__portf_arrow_up {
   position: absolute;
   top: 0;
   left: 0;
@@ -62,4 +57,8 @@
   width: 43px;
   height: 27px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+}
+.icon__link {
+  width: 20px;
+  height: 20px;
 }

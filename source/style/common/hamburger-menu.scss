@@ -1,10 +1,10 @@
-.nav__hamburger-container {
+.hamburger-toggle {
   position: relative;
   float: right;
   display: inline-block;
+  cursor: pointer;
 
-  .nav__hamburger-icons {
-
+  .hamburger-toggle__icons{
     height: 20px;
     left: 0px;
     top: 20px;

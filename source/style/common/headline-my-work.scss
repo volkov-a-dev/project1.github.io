@@ -11,10 +11,9 @@
     top: -190px;
   }
 
-  &__my-work-title {
+  &__title {
     text-align: center;
-
-    svg {
+    .icon {
       position: absolute;
       width: 500px;
       height: 100%;
@@ -24,43 +23,46 @@
       fill: #6d7070;
       opacity: 0.1;
     }
-  }
-  &__title-text {
-    font-family: $bernierReg;
-    text-align: center;
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    font-size: 63px;
-    color: #373e42;
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: -42px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 22px;
-      height: 5px;
-      z-index: 1;
-      background: #373e42;
-      background: rgba(55, 62, 66, 0.2);
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      right: -42px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 22px;
-      height: 5px;
-      z-index: 1;
-      background: #373e42;
-      background: rgba(55, 62, 66, 0.2);
+    &-text {
+      font-family: $bernierReg;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      font-size: 63px;
+      color: #373e42;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -42px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 22px;
+        height: 5px;
+        z-index: 1;
+        background: #373e42;
+        background: rgba(55, 62, 66, 0.2);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: -42px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 22px;
+        height: 5px;
+        z-index: 1;
+        background: #373e42;
+        background: rgba(55, 62, 66, 0.2);
+      }
     }
   }
 }
+

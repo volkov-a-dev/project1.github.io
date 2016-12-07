@@ -1,38 +1,18 @@
-.socials__content {
+.socials {
   display: inline-block;
 }
-.social__link{
+.socials__content-item{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
     margin-right: 18px;
-    svg {
-        line-height: 15px;
-        display: inline-block;
-        fill: #fff;
-        fill-opacity: .80;
-      &:hover {
-        fill-opacity: 1;
-      }
-    }
 }
 .nav__hamburger-icons {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
-  svg {
-    line-height: 15px;
-    display: inline-block;
-    cursor: pointer;
-    fill: #fff;
-    fill-opacity: .80;
-
-    &:hover {
-      fill-opacity: 1;
-    }
-  }
 }
-.social__link-footor {
+.socials-footer {
   font-family: $fontMedium;
-  svg {
+  .icon{
     background: #a9acae;
     border-radius: 50%;
     border: 1px solid #a9acae;

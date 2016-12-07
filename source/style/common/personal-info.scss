@@ -1,28 +1,30 @@
-.content__personal-info{
+.profile {
+  margin-top: 90px;
+  text-align: center;
+}
+.profile__personal{
   position: absolute;
   left: 50%;
   transform: translate(-50%,0);
   z-index: 2;
-}
-.profile {
-  padding: 90px 0px 0px 9px;
-  text-align: center;
-  &__my-photo {
+
+  &-photo {
     margin-bottom: 20px;
-    img {
+    &-img {
       width: 141px;
       height: 142px;
       border-radius: 50%;
     }
   }
-  &__description_content {
-    .user__name-title{
+
+  &-description {
+    &-title{
       font-family: $fontMedium;
       color: #fff;
       font-size: 2.186em;
       margin: 0 0 5px;
     }
-    .user__subject-info {
+    &-subject {
       font-family: $robotoLight;
       color: #fff;
       opacity: .8;
@@ -32,3 +34,4 @@
     }
   }
 }
+
