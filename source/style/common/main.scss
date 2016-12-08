@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+}
+.page__conten{
+  height: auto;
+  min-height: 100%;
+
+  .page__conten-padding-bottom {
+    padding-bottom: 141px;
+  }
+}
+
+.footer {
+  height: 141px;
+  margin-top: -141px;
+}

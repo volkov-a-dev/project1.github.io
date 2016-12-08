@@ -1,0 +1,13 @@
+.nav__container {
+  .nav__li{
+    list-style: none;
+    display: inline;
+    margin-right: 40px;
+    color: #fff;
+    font-family: $fontMedium;
+
+    &:hover {
+      color: $general-color;
+    }
+  }
+}

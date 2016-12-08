@@ -1,0 +1,13 @@
+header.header
+        .header__content
+            .header__content-control-panel
+                include icons
+                include hamburger-menu
+
+            .header__content-title
+                .header__content-title-background
+                .header__content-title-personal-info
+                    include ./personal-info
+
+        a.arrow__down(href="#")
+            +svg('arrow_down')

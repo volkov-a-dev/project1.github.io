@@ -1,0 +1,5 @@
+.socials
+    .socials__content
+        each social in ['vk', 'github', 'in' ]
+            a(class=`socials__content-item socials__content-item-${social}` href="#")
+                +svg(social)

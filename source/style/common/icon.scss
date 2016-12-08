@@ -1,0 +1,32 @@
+.socials {
+  display: inline-block;
+}
+.socials__content-item{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 18px;
+}
+.nav__hamburger-icons {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+.social__link-footor {
+  margin-left: 6px;
+}
+.socials-footer {
+  font-family: $fontMedium;
+
+  .icon{
+    background: #a9acae;
+    border-radius: 50%;
+    border: 1px solid #a9acae;
+    fill: #2f4349;
+    fill-opacity: 1;
+
+    &:hover {
+      fill: #fff;
+      border: 0 solid #2f4349;
+      background: #2f4349;
+    }
+  }
+}

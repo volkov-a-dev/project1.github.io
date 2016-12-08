@@ -1,0 +1,21 @@
+mixin svg(id)
+    svg(class='icon icon__' + id)
+        use(xlink:href='/assets/img/sprite.svg#' + id)
+mixin button(type, href, className, text)
+    if type === 'link'
+        a(class=`btn btn__link ${className}` href='href')
+            +svg('link')
+            |#{text}
+    else
+        a(class=`btn btn__link ${className}` href='href') #{text}
+
+mixin testimonial(data)
+    each item in data
+        .testimonial-item
+            .testimonial-item__text #{item.text}
+            .testimonial-item__user
+                .testimonial-item__user-photo
+                    img.testimonial__item-user-photo-img(src=item.img alt=item.name)
+                .testimonial-item__user-info
+                    .testimonial-item__user-name #{item.name}
+                    .testimonial-item__user-description #{item.description}
