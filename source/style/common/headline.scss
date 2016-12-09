@@ -2,6 +2,9 @@
   position: relative;
   padding: 70px 0;
   background: #faf8f0;
+  &-default-paddinf {
+    padding: 0;
+  }
   
   .traingie {
     position: absolute;

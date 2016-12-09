@@ -19,3 +19,12 @@ mixin testimonial(data)
                 .testimonial-item__user-info
                     .testimonial-item__user-name #{item.name}
                     .testimonial-item__user-description #{item.description}
+
+
+mixin skills (data)
+    .skill
+        .skill__name #{data}
+        svg(class="skill__circles g-circles" width="125" height="125")
+            <circle r="51" cx="61" cy="61" stroke="#ccc" fill="none" />
+            <circle r="51" cx="61" cy="61" transform="rotate(-90 61 61)" class="sector" />
+

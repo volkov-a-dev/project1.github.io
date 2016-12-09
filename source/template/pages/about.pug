@@ -1,3 +1,74 @@
-//
-   Created by alex on 12/8/16.
+extends ../_template
+block variables
+    - var title = 'About page'
+
+
+block header
+    include  ../sections/main-header
+block content
+
+    .headline.headline-default-paddinf
+        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" ).traingie
+            polygon(points="0,23 0,86 500.8,86 500.8,85").traingie__about-left
+            polygon(points="1000,23 1000,86 500,86 500,85").traingie__about-right
+
+    .container.container-about
+        .col-6.container-about__background-left
+            .container.container-about__content
+                .col-6.container-about__title
+                    +svg('about_header')
+                    h2.container-about__title-general  Обо мне
+                .col-6.container-about__my-infomy-info
+                    img.container-about__my-photo(src='assets/img/my-photo.jpg')
+                    h3.container-about__title-second Кто я
+                    p.container-about__content-text
+                    | Я веб разработчик из Новосибирска. Мне 27 лет.<br/>
+                    | Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.<br/>
+                    | <br>
+                    | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+        .col-6.container-about__background-right
+            h3.container-about__title-second Чем я могу быть <br/ > вам подезен
+            p.container-about__content-text
+            |Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+            .direction
+                .direction__wrapper
+                    h4.direction__wrapper-name Frontend
+                    .direction__wrapper-items
+                        .direction__wrapper-item
+                            +skills('HTML 5')
+                        .direction__wrapper-item
+                            +skills('CSS3')
+                        .direction__wrapper-item
+                            +skills('JavaScript & jQuery')
+
+                .direction__wrapper
+                    h4.direction__wrapper-name Backend
+                    .direction__wrapper-items
+                        .direction__wrapper-item
+                            +skills('PHP')
+                        .direction__wrapper-item
+                            +skills('mySQL')
+                        .direction__wrapper-item
+                            +skills('Node.js & npm')
+                        .direction__wrapper-item
+                            +skills('Mongo.db')
+
+                .direction__wrapper
+                    h4.direction__wrapper-name WorkFlow
+                    .direction__wrapper-items
+                        .direction__wrapper-item
+                            +skills('Git')
+                        .direction__wrapper-item
+                            +skills('Gulp')
+                        .direction__wrapper-item
+                            +skills('Bower')
+
+    .maps
+        .maps__dashbord
+            .maps__dashnord-content
+                h3.maps__dashbord__title Контакты
+                //+svg('skype')
+                //+svg('skype_n')
 
