@@ -9,11 +9,11 @@
   background: url('/assets/img/bg.jpg')no-repeat 0 0;
   background-size: cover;
 
-    .header__content-control-panel{
-      padding:30px 30px 0;
-    }
-}
 
+}
+.header__content-control-panel{
+  padding:30px 30px 0;
+}
 .header__content-title-background {
   position: absolute;
   left:50%;
@@ -43,5 +43,18 @@
     &:hover {
       fill-opacity: 1;
     }
+  }
+}
+
+.header__blog {
+  height: 400px;
+  //background: url("");
+  background-color: #373e42;
+
+}
+.headline.headline__blog {
+  padding: 0;
+  .traingie {
+    fill: #fff;
   }
 }
