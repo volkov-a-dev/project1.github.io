@@ -36,9 +36,11 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   fill:#fff;
-  fill-opacity: 0.8;
 
-  &:hover {
-    fill-opacity: 1;
+  .icon {
+    fill-opacity: 0.8;
+    &:hover {
+      fill-opacity: 1;
+    }
   }
 }

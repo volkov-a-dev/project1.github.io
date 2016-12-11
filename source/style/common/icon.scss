@@ -5,6 +5,17 @@
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
     margin-right: 18px;
+  .icon {
+    fill-opacity: 0.8;
+    &:hover {
+      fill-opacity: 1;
+    }
+  }
+
+
+
+
+
 }
 .nav__hamburger-icons {
   text-decoration: none;

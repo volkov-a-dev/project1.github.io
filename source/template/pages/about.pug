@@ -22,15 +22,16 @@ block content
                     img.container-about__my-photo(src='assets/img/my-photo.jpg')
                     h3.container-about__title-second Кто я
                     p.container-about__content-text
-                    | Я веб разработчик из Новосибирска. Мне 27 лет.<br/>
-                    | Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.<br/>
-                    | <br>
-                    | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                        | Я веб разработчик из Новосибирска. Мне 27 лет.<br/>
+                        | Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.<br/>
+                        | <br>
+                        | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
         .col-6.container-about__background-right
             h3.container-about__title-second Чем я могу быть <br/ > вам подезен
             p.container-about__content-text
-            |Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
 
             .direction
                 .direction__wrapper
@@ -42,7 +43,6 @@ block content
                             +skills('CSS3')
                         .direction__wrapper-item
                             +skills('JavaScript & jQuery')
-
                 .direction__wrapper
                     h4.direction__wrapper-name Backend
                     .direction__wrapper-items
@@ -54,7 +54,6 @@ block content
                             +skills('Node.js & npm')
                         .direction__wrapper-item
                             +skills('Mongo.db')
-
                 .direction__wrapper
                     h4.direction__wrapper-name WorkFlow
                     .direction__wrapper-items
@@ -68,7 +67,22 @@ block content
     .maps
         .maps__dashbord
             .maps__dashnord-content
-                h3.maps__dashbord__title Контакты
-                //+svg('skype')
-                //+svg('skype_n')
+                h3.maps__dashbord-title Контакты
+                .maps__dashbord-contact-info
+                    +svg('skype')
+                    .maps__dashbord-content-description skype_kdn
+                .maps__dashbord-contact-info
+                    +svg('envelope')
+                    .maps__dashbord-content-description astahov@gmail.com
+                .maps__dashbord-contact-info
+                    +svg('phone')
+                    .maps__dashbord-content-description +7 931 200 93 24
+                .maps__dashbord-contact-info
+                    +svg('map_marker')
+                    .maps__dashbord-content-description г.Новосибирскб ул Инская, д. 5
 
+
+
+block footer
+    .box-opacity
+        include ../sections/footer

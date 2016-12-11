@@ -70,7 +70,6 @@
     text-align: center;
     font-size: 35px;
 
-    margin-top: 10px;
     &:after {
       content: '';
       position: absolute;
@@ -165,13 +164,75 @@
   background-size: cover;
   height:954px;
   padding-top: 327px;
+  margin-bottom: -141px;
+
   &__dashbord{
     width: 380px;
     height: 290px;
     margin: 0 auto;
     border-radius: 5px;
-    padding: 30px;
+    padding: 30px 40px;
     background: rgba(255, 255, 255, 0.9);
+
+    &-title {
+      color: #455a64;
+      font-family: $robotoReular;
+      position: relative;
+      text-align: center;
+      font-size: 35px;
+      width: 206px;
+      margin: 0 auto;
+      margin-bottom: 27px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 50%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 5px;
+        z-index: 1;
+        background: rgba(55, 62, 66, 0.2);
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 5px;
+        z-index: 1;
+        background: rgba(55, 62, 66, 0.2);
+      }
+    }
+    &-contact-info {
+      margin-bottom: 10px;
+
+      .icon {
+        width:24px;
+        height: 30px;
+      }
+    }
+
+    &-content-description{
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 8px;
+      margin-left: 5px;
+      font-family: $fontMedium;
+      color: $contact-form-color-text ;
+    }
+    .icon {
+      fill:$icon-color;
+    }
+
   }
 
+}
+
+.box-opacity {
+  opacity: 0.8;
 }

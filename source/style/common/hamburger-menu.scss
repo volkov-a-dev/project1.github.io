@@ -9,5 +9,12 @@
     left: 0px;
     top: 20px;
 
+    .icon {
+      fill-opacity: 0.8;
+      &:hover {
+        fill-opacity: 1;
+      }
+    }
   }
 }
+
