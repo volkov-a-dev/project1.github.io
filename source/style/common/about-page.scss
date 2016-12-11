@@ -155,9 +155,6 @@
   stroke: $general-color;
 }
 
-//-.g-circles:hover .sector {
-//-  stroke-dasharray: 200 320;
-//-}
 
 .maps {
   background: url('/assets/img/content/maps.jpg') no-repeat 0 0;
@@ -165,6 +162,8 @@
   height:954px;
   padding-top: 327px;
   margin-bottom: -141px;
+
+
 
   &__dashbord{
     width: 380px;
@@ -176,7 +175,7 @@
 
     &-title {
       color: #455a64;
-      font-family: $robotoReular;
+      font-family: $bernierReg;
       position: relative;
       text-align: center;
       font-size: 35px;
