@@ -6,11 +6,11 @@ $grid-spacing: 3%;
   box-sizing: border-box;
   padding-right: $grid-spacing;
 
-
   &:last-child {
     padding-right: 0;
   }
 }
+
 %clearfix{
   &:after {
     content: '';
@@ -18,9 +18,11 @@ $grid-spacing: 3%;
     clear: both;
   }
 }
+
 .container {
   @extend %clearfix
 }
+
 @for $i from 1 through $col-amount {
   .col-#{$i}{
     width: 100% / $col-amount * $i;

@@ -11,6 +11,7 @@ a {
   text-decoration: none;
 }
 @mixin clearfix {
+
   &:before,
   &:after {
     content: "";
@@ -38,8 +39,10 @@ a {
   border: none;
   text-decoration: none;
 }
+
 .btn__link {
   border-radius: 5px;
+
   .icon__link {
     display: inline-block;
     vertical-align: middle;
@@ -47,4 +50,3 @@ a {
     fill: #fff;
   }
 }
-

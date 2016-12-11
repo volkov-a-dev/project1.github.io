@@ -19,7 +19,7 @@ block content
                     +svg('about_header')
                     h2.container-about__title-general  Обо мне
                 .col-6.container-about__my-infomy-info
-                    img.container-about__my-photo(src='assets/img/my-photo.jpg')
+                    img.container-about__my-photo(src='assets/img/my-photo.jpg' alt='Волков Алексей')
                     h3.container-about__title-second Кто я
                     p.container-about__content-text
                         | Я веб разработчик из Новосибирска. Мне 27 лет.<br/>
@@ -28,10 +28,9 @@ block content
                         | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
         .col-6.container-about__background-right
-            h3.container-about__title-second Чем я могу быть <br/ > вам подезен
+            h3.container-about__title-second Чем я могу быть <br /> вам подезен
             p.container-about__content-text
                 | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-
 
             .direction
                 .direction__wrapper
@@ -70,18 +69,17 @@ block content
                 h3.maps__dashbord-title Контакты
                 .maps__dashbord-contact-info
                     +svg('skype')
-                    .maps__dashbord-content-description skype_kdn
+                    a.maps__dashbord-content-description(href='skype:volkov.a.fe ') volkov.a.fe
+
                 .maps__dashbord-contact-info
                     +svg('envelope')
-                    .maps__dashbord-content-description astahov@gmail.com
+                    a.maps__dashbord-content-description(href='mailto:volkov.a.fe@gmail.com ') volkov.a.fe@gmail.com
                 .maps__dashbord-contact-info
                     +svg('phone')
-                    .maps__dashbord-content-description +7 931 200 93 24
+                    a.maps__dashbord-content-description(href='tel:+375293870054 ') +375 29 387 00 54
                 .maps__dashbord-contact-info
                     +svg('map_marker')
-                    .maps__dashbord-content-description г.Новосибирскб ул Инская, д. 5
-
-
+                    a.maps__dashbord-content-description(href='https://www.google.by/maps/place/vulica+Karla+Marksa+39,+Minsk/@53.9001568,27.5597218,17z/data=!3m1!4b1!4m5!3m4!1s0x46dbcfc17227970f:0xfbd6e079a56caa5b!8m2!3d53.9001568!4d27.5619158?hl=en', target="_blank") г. Минск ул Карло Маркса, д. 39
 
 block footer
     .box-opacity

@@ -1,7 +1,6 @@
 .hamburger-toggle {
   position: relative;
   float: right;
-  display: inline-block;
   cursor: pointer;
 
   .hamburger-toggle__icons{
@@ -11,10 +10,10 @@
 
     .icon {
       fill-opacity: 0.8;
+
       &:hover {
         fill-opacity: 1;
       }
     }
   }
 }
-
