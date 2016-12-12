@@ -1,6 +1,14 @@
 header.header
     .header__blog
-        .header__content-control-panel
+        .header__blog-control-panel
             include icons
             include hamburger-menu
-
+        .title-header
+            .title-header__content
+                .title-header__content-photo
+                    img.title-header__content-photo-my(src='/assets/img/my-photo.jpg' alt='Volkov Alexey')
+                .title-header__content-title
+                    .title-header__content-title-img
+                        +svg('blog_header')
+                    h2.title-header__content-title-page-name Блог
+                .title-header__content-description Статьи, которые я написал

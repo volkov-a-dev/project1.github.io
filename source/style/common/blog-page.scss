@@ -1,55 +1,112 @@
 .blog-wrapper {
   padding: 70px 0;
 }
+
 .blog-wrapper {
   width: 1270px;
   margin:0 auto;
 
   .navigation-block-menu {
     display: inline-block;
-    width:20%;
+    width:25%;
     vertical-align: top;
     text-align: right;
 
     &__items {
       list-style-type: none;
-      padding: 0 20px;
+      margin: 0;
     }
 
     &__item {
       height: 42px;
+      display: table;
+      float: right;
+      margin-right: 48px;
+      margin-bottom: 20px;
 
       &-link {
-        font-family: $robotoBold;
+        display: table-cell;
+        vertical-align: middle;
+        font-family: $robotoReular;
         color: $blog-nav-normal;
-      }
-      .active-item-link{
-        border-right: 4px solid red;
         padding-right: 20px;
-        line-height: 42px;
-        color: $blog-nav-active;
+        line-height: 1.7;
       }
+    }
+
+    .active-item-link{
+      color: $blog-nav-active;
+      border-right: 3px solid $blog-nav-active;
+      font-family: $robotoBold ;
+      font-weight: 600;
     }
   }
   .block-posts {
     display: inline-block;
     vertical-align: top;
-    width: 70%;
+    width: 74%;
 
-    &__title {
-      font-family: $bernierReg;
-      font-size: 35px;
-      color: $blog-title-post;
-    }
+    &__item {
 
-    &__post-date {
-      font-family: $robotoReular;
-      color: $blog-date-post;
-      font-size:16px;
-    }
+      &-title {
+        font-family: $bernierReg;
+        font-size: 35px;
+        color: $blog-title-post;
+        margin-top: 0;
+        margin-bottom: 18px;
+      }
 
-    &__content-post{
-      font-family: $robotoReular;
+      &-post-date {
+        font-family: $robotoReular;
+        color: $blog-date-post;
+        font-size:16px;
+        margin-bottom: 20px;
+      }
+
+      &-content-post {
+        font-family: $robotoReular;
+        line-height: 1.6;
+        width: 96%;
+      }
+
+      &-line {
+        display: block;
+        max-width: 680px;
+        border: 3px solid $blog-page-head-line;
+        margin-top: 68px;
+        margin-bottom: 65px;
+      }
     }
+  }
+}
+
+.code-example {
+  background: $code-example-cotent;
+  font-size: 12px;
+  padding-left: 20px;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 20px;
+    background: $code-item-background;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 20px;
+    background: $code-item-background;
+  }
+
+  .code-example__item {
+    font-family: $robotoLight;
+    background: $code-item-background;
+    padding-left: 5px;
+  }
+
+  .code-example__comment{
+    color: #ccc;
+    font-size: 11px;
   }
 }
