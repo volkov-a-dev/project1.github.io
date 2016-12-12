@@ -10,14 +10,25 @@ body {
 a {
   text-decoration: none;
 }
+@mixin clearfix {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
 .icon {
   line-height: 15px;
   display: inline-block;
   fill: #fff;
-  fill-opacity: .80;
-  &:hover {
-    fill-opacity: 1;
-  }
+  fill-opacity: 1;
+
 }
 
 .btn {
@@ -28,8 +39,10 @@ a {
   border: none;
   text-decoration: none;
 }
+
 .btn__link {
   border-radius: 5px;
+
   .icon__link {
     display: inline-block;
     vertical-align: middle;
@@ -37,4 +50,3 @@ a {
     fill: #fff;
   }
 }
-

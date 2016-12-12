@@ -2,7 +2,10 @@
   position: relative;
   padding: 70px 0;
   background: #faf8f0;
-  
+
+  &-default-paddinf {
+    padding: 0;
+  }
   .traingie {
     position: absolute;
     fill: #faf8f0;
@@ -10,9 +13,9 @@
     height: 190px;
     top: -190px;
   }
-
   &__title {
     text-align: center;
+
     .icon {
       position: absolute;
       width: 500px;
@@ -65,4 +68,3 @@
     }
   }
 }
-

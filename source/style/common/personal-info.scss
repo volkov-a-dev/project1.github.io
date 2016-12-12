@@ -10,6 +10,7 @@
 
   &-photo {
     margin-bottom: 20px;
+
     &-img {
       width: 141px;
       height: 142px;
@@ -18,12 +19,14 @@
   }
 
   &-description {
+
     &-title{
       font-family: $fontMedium;
       color: #fff;
       font-size: 2.186em;
       margin: 0 0 5px;
     }
+
     &-subject {
       font-family: $robotoLight;
       color: #fff;
@@ -34,4 +37,3 @@
     }
   }
 }
-
