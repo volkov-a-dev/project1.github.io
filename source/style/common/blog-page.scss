@@ -1,0 +1,112 @@
+.blog-wrapper {
+  padding: 70px 0;
+}
+
+.blog-wrapper {
+  width: 1270px;
+  margin:0 auto;
+
+  .navigation-block-menu {
+    display: inline-block;
+    width:25%;
+    vertical-align: top;
+    text-align: right;
+
+    &__items {
+      list-style-type: none;
+      margin: 0;
+    }
+
+    &__item {
+      height: 42px;
+      display: table;
+      float: right;
+      margin-right: 48px;
+      margin-bottom: 20px;
+
+      &-link {
+        display: table-cell;
+        vertical-align: middle;
+        font-family: $robotoReular;
+        color: $blog-nav-normal;
+        padding-right: 20px;
+        line-height: 1.7;
+      }
+    }
+
+    .active-item-link{
+      color: $blog-nav-active;
+      border-right: 3px solid $blog-nav-active;
+      font-family: $robotoBold ;
+      font-weight: 600;
+    }
+  }
+  .block-posts {
+    display: inline-block;
+    vertical-align: top;
+    width: 74%;
+
+    &__item {
+
+      &-title {
+        font-family: $bernierReg;
+        font-size: 35px;
+        color: $blog-title-post;
+        margin-top: 0;
+        margin-bottom: 18px;
+      }
+
+      &-post-date {
+        font-family: $robotoReular;
+        color: $blog-date-post;
+        font-size:16px;
+        margin-bottom: 20px;
+      }
+
+      &-content-post {
+        font-family: $robotoReular;
+        line-height: 1.6;
+        width: 96%;
+      }
+
+      &-line {
+        display: block;
+        max-width: 680px;
+        border: 3px solid $blog-page-head-line;
+        margin-top: 68px;
+        margin-bottom: 65px;
+      }
+    }
+  }
+}
+
+.code-example {
+  background: $code-example-cotent;
+  font-size: 12px;
+  padding-left: 20px;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 20px;
+    background: $code-item-background;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 20px;
+    background: $code-item-background;
+  }
+
+  .code-example__item {
+    font-family: $robotoLight;
+    background: $code-item-background;
+    padding-left: 5px;
+  }
+
+  .code-example__comment{
+    color: #ccc;
+    font-size: 11px;
+  }
+}
