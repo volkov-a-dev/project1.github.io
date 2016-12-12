@@ -1,7 +1,8 @@
 html, body {
   height: 100%;
 }
-.page__conten{
+
+.page__conten {
   height: auto;
   min-height: 100%;
 
@@ -10,7 +11,21 @@ html, body {
   }
 }
 
+.page-full {
+  height: auto;
+  min-height: 100%;
+
+  .page-conten__padding-bottom-welcome {
+    padding-bottom: 70px;
+  }
+}
+
 .footer {
   height: 141px;
   margin-top: -141px;
+}
+
+.footer-small {
+  height: 70px;
+  margin-top: -70px;
 }
