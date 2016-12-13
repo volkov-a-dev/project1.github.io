@@ -6,23 +6,22 @@ block variables
 
 block header
     .header-welcome
-        a.btn.btn-link Авторизоваться
+        a.btn.btn-link(href='#') Авторизоваться
+
 
 block content
     .dashbord-box
         .dashbord-box__content
-           img.dashbord-box__content-photo(src='/assets/img/my-photo.jpg' alt='Volkov Alexey')
-           h1.dashbord-box__content-title Волков Алексей
-           h4.dashbord-box__content-second-title Личный сайт веб разработчика
+            img.dashbord-box__content-photo(src='/assets/img/my-photo.jpg' alt='Volkov Alexey')
+            h1.dashbord-box__content-title Волков Алексей
+            h4.dashbord-box__content-second-title Личный сайт веб разработчика
             .dashbord-box__content-icon
                 include ../sections/icons
 
-
-        .dashbord-box__navigation
-            a.link(href="#") Мои работы
-            a.link(href="#") Обо мнеексей
-            a.link(href="#") Блог
-
+            .dashbord-box__content-navigation
+                a.btn.link.btn-welcone(href="#") Мои работы
+                a.btn.link.btn-welcone(href="#") Обо мне
+                a.btn.link.btn-welcone(href="#") Блог
 
 
 block footer
