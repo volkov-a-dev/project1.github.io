@@ -5,42 +5,110 @@
 
 .header-welcome {
   padding: 25px;
+  min-height:100px;
   text-align: right;
 
   .btn-link {
-    padding: 12px 30px;
+    width: 180px;
+    padding: 12px 10px;
     border-radius: 5px;
-    background: transparent;
-    border: 1px solid #fff;
+    border: 1px solid $welcome-border-button-flip;
     font-weight: 600;
-    
-    &:active {
-      background-color: #fff;
-      color: #00bfa5;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $welcome-button-flip-bg-hover;
+      color: $welcome-button-flip-color-hover;
     }
   }
 }
 
-.dashbord-box {
+.flip-container,
+.flip-container__flipper-front,
+.flip-container__flipper-back {
+  width: 380px;
+  border-radius: 5px;
+}
+
+.flip-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
 
-  &__content {
-    width: 380px;
-    height: 398px;
-    background: rgba(255, 255, 255, 0.7);
-    padding-top: 40px;
-    border-radius: 5px;
-    overflow: hidden;
+  .flip .flip-container__flipper-back {
+    transform: rotateY(0deg);
+  }
 
-    &-photo {
+  .flip .flip-container__flipper-front {
+    transform: rotateY(180deg);
+  }
+
+  &__flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+
+    &-front,
+    &-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $welcome-login-background;
+      backface-visibility: hidden;
+      transition: 0.9s;
+      transform-style: preserve-3d;
+      overflow: hidden;
+    }
+
+    &-front {
+      z-index: 2;
+      transform: rotateY(0deg);
+    }
+
+    &-back {
+      transform: rotateY(-180deg);
+    }
+  }
+}
+
+.vertical{
+
+  .flip-container {
+    position: relative;
+  }
+
+  .flip-container__flipper-back {
+    transform: rotateX(180deg);
+  }
+
+  .flip .flip-container__flipper-back {
+    transform: rotateX(0deg);
+  }
+
+  .flip .flip-container__flipper-front {
+    transform: rotateX(180deg);
+  }
+}
+
+.welcome {
+  overflow: hidden;
+
+
+  &__dashboard{
+
+    &-info {
+      padding: 40px 40px 35px 40px;
+    }
+
+    &-my-photo {
       display: block;
       margin: 0 auto;
       border-radius: 50%;
     }
-
     &-title {
       margin: 15px 0 0 0;
       text-align: center;
@@ -48,16 +116,19 @@
       font-size: 28px;
       color: $welcome-title;
     }
+
     &-second-title {
       margin: 5px 0;
+      font-size: 16px;
       text-align: center;
       font-family: $robotoReular;
       font-weight: 400;
       color: $welcome-title;
     }
-    &-icon {
+
+    &-social-icon {
       text-align: center;
-      margin: 35px 0px 49px 0px;
+      padding-top: 28px;
 
       .socials__content-item .icon {
         fill: $welcome-icon-color;
@@ -69,18 +140,98 @@
       }
     }
   }
-}
+
+  &__navigation-social-link {
+    display: inline-block;
+    width: 33.3%;
+    padding: 0;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    height: 45px;
 
 
-.btn-welcone {
-  font-family: $fontMedium;
-  padding: 15px 31px;
-  border-right: 2px solid rgba(255,255,255, 0.7);
-  
-  &:active {
-    background-color: #26a69a;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 1%;
+      vertical-align: middle;
+    }
+    &-text{
+      display: inline-block;
+      vertical-align: middle;
+      font-family: $fontMedium;
+
+      position: relative;
+    }
+
+    &:hover {
+      background-color: $welcome-login-hover-link;
+    }
+  }
+
+  &__navigation{
+    &-social-link:last-child {
+      border: 0;
+    }
   }
 }
+
+.login__form {
+  &-box {
+    padding: 20px;
+  }
+  &-title {
+    text-align: center;
+    font-family: $bernierReg;
+    margin: 15px 30px 35px 30px;
+    letter-spacing: 1.2px;
+    color: $login-title-color;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 5px;
+      position: absolute;
+      background: $login-dash-color;
+      top: 50%;
+      left: 0;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 5px;
+      position: absolute;
+      background: $login-dash-color;
+      top: 50%;
+      right: 0;
+    }
+  }
+  &-group {
+    margin-bottom: 20px;
+    height: 45px;
+  }
+  &-input {
+    height: 44px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  &-checkbox {
+    width: 22px;
+    height: 22px;
+    margin-left: -10px;
+
+    &-text {
+      vertical-align: 5px;
+    }
+  }
+}
+
+
 .footer-small {
 
   &__content {
