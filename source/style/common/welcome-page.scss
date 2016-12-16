@@ -301,6 +301,11 @@
 .login__form-checkbox:checked + .login__form-checkbox-text:before {
   color: $login-check-color;
 }
+.login__form-radio:checked{
+  color: red;
+}
+
+
 
 .footer-small {
 

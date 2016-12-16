@@ -15,12 +15,13 @@ form.login__form
                 span.login__form-checkbox-text-content Я человек
         .login__form-radio-ask
             .login__form-radio-ask-text Вы точно не робот?
+
                 .login__form-radio-answer
-                    label.login__form-radio-text
-                        input.login__form-radio(type='radio', name='hidden',  checked='')
+                    label.login__form-radio-text(for='login-yes')
+                        input.login__form-radio(type='radio' name='answer-ask' id='login-yes')
                         | Да
-                    label.login__form-radio-text
-                        input(type='radio', name='tes', value=0  checked='')
+                    label.login__form-radio-text(for='login-no')
+                        input.login__form-radio(type='radio' name='answer-ask' id='login-no'  checked )
                         | Не уверен
 
     .contac-form__buttons
