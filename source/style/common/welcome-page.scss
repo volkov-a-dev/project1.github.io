@@ -97,9 +97,7 @@
 .welcome {
   overflow: hidden;
 
-
   &__dashboard{
-
     &-info {
       padding: 40px 40px 35px 40px;
     }
@@ -109,6 +107,7 @@
       margin: 0 auto;
       border-radius: 50%;
     }
+
     &-title {
       margin: 15px 0 0 0;
       text-align: center;
@@ -149,7 +148,6 @@
     text-align: center;
     height: 45px;
 
-
     &:before {
       content: '';
       display: inline-block;
@@ -157,11 +155,11 @@
       width: 1%;
       vertical-align: middle;
     }
+
     &-text{
       display: inline-block;
       vertical-align: middle;
       font-family: $fontMedium;
-
       position: relative;
     }
 
@@ -181,6 +179,7 @@
   &-box {
     padding: 20px;
   }
+
   &-title {
     text-align: center;
     font-family: $bernierReg;
@@ -199,6 +198,7 @@
       top: 50%;
       left: 0;
     }
+
     &:after {
       content: '';
       display: inline-block;
@@ -210,27 +210,97 @@
       right: 0;
     }
   }
+
   &-group {
     margin-bottom: 20px;
     height: 45px;
-  }
-  &-input {
-    height: 44px;
-    width: 100%;
-    border-radius: 5px;
+    position: relative;
+
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    &-icon {
+      width: 13%;
+      height: 100%;
+      float: left;
+      background: #f0efe9;
+      position: relative;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .icon {
+      width: 14px;
+      height: 14px;
+      margin-left: 14px;
+      position: absolute;
+      fill: #c4cbcd;
+      top: 50%;
+      left: 0;
+      transform: translate(0%,-50%);
+    }
   }
 
-  &-checkbox {
-    width: 22px;
-    height: 22px;
-    margin-left: -10px;
+  &-input {
+    float: left;
+    width: 87%;
+    height:100%;
+    padding-left: 20px;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+  }
+
+  &-radio-ask {
+    text-align: center;
 
     &-text {
-      vertical-align: 5px;
+      margin: 12px 0;
+      color: $login-ask-text;
+      font-weight: 600;
     }
+  }
+
+  &-radio-text{
+    margin: 0 25px;
   }
 }
 
+.login__form-capcha-checkbox{
+  margin: 20px auto;
+  text-align: center;
+}
+
+.login__form-checkbox {
+  display: none;
+}
+.login__form-checkbox-text {
+  display: inline;
+  font-family: $robotoReular;
+  color: $login-ask-text;
+
+  &-content{
+    vertical-align: -2px;
+  }
+}
+
+.login__form-checkbox + .login__form-checkbox-text:before {
+  content: "\f00c";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  padding: 1px;
+  border-radius: 3px;
+  color: transparent;
+  background-color: $login-checkbox-bg-color;
+  transition-duration: 0.3s;
+}
+
+.login__form-checkbox:checked + .login__form-checkbox-text:before {
+  color: $login-check-color;
+}
 
 .footer-small {
 

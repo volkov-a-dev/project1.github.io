@@ -2,23 +2,27 @@ form.login__form
     .login__form-box
         h1.login__form-title Авторизуйтесь
         .login__form-group
+            .login__form-group-icon
+                +svg('login')
             input.login__form-input(type='text'  placeholder='Логин')
         .login__form-group
+            .login__form-group-icon
+                +svg('password')
             input.login__form-input(type='password'  placeholder='Пароль')
         .login__form-capcha-checkbox
-            input.login__form-checkbox(type='checkbox')
-            label.login__form-checkbox-text Я человек
-
-
+            input.login__form-checkbox(type='checkbox' value='None' id="capcha-checkbox" )
+            label.login__form-checkbox-text.fa.fa-check(for='capcha-checkbox')
+                span.login__form-checkbox-text-content Я человек
         .login__form-radio-ask
-            .de Вы точно не робат
-            label.radio-inline
-                input(type='radio', name='hidden',  checked='')
-                | Да
-                input(type='radio', name='tes', value=0  checked='')
-                | Не уверен
+            .login__form-radio-ask-text Вы точно не робот?
+                .login__form-radio-answer
+                    label.login__form-radio-text
+                        input.login__form-radio(type='radio', name='hidden',  checked='')
+                        | Да
+                    label.login__form-radio-text
+                        input(type='radio', name='tes', value=0  checked='')
+                        | Не уверен
 
     .contac-form__buttons
         button(type='button' class='btn btn-return ') На главную
         button(type='submit' class='btn   ') Отправить
-
