@@ -23,12 +23,14 @@
 
   $('.icon__hamburger').click(
       function () {
-          $('.menu-full').addClass('open')
+          $('.menu-full').addClass('open');
+          $('body').addClass('body-overflow');
       }
   );
   $('.close-button').click(
       function () {
-          $('.menu-full').removeClass('open')
+          $('.menu-full').removeClass('open');
+          $('body').removeClass('body-overflow');
       }
   )
 
