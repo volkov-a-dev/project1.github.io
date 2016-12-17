@@ -1,3 +1,4 @@
-.nav__container
-    each navigation in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация' ]
-            a(href="#").nav__li= navigation
+ul.nav__container
+    each navigation in ['Мои работы', 'Блог', 'Обо мне', 'Авторизация' ]
+        li.nav__li
+            a(href="#").nav__link= navigation

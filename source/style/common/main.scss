@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 .page__conten {
@@ -8,6 +9,82 @@ html, body {
 
   .page__conten-padding-bottom {
     padding-bottom: 141px;
+  }
+}
+
+.menu-full {
+  display: none;
+}
+
+.menu-full.open {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(38,166,154, 0.7);
+  z-index: 999;
+  
+
+
+  .close-button {
+    float: right;
+    margin-top:20px;
+    margin-right: 50px;
+    font-size: 45px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .nav__container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    list-style: none;
+    transform: translate(-50%, -50%);
+
+    .nav__li {
+      font-size: 52px;
+      text-align: center;
+      margin: 20px 0;
+
+      .nav__link {
+        font-family: $bernierReg;
+        position: relative;
+        margin: 0;
+        padding-right: 40px;
+        padding-left: 40px;
+
+        &:hover {
+          color: #fff;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top:50%;
+            left: 0;
+            width: 22px;
+            height: 5px;
+            background: rgba(255,255,255, 0.3);
+
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            top:50%;
+            right: 0;
+            width: 22px;
+            height: 5px;
+            background: rgba(255,255,255, 0.3);
+          }
+        }
+      }
+    }
   }
 }
 

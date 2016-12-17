@@ -16,10 +16,27 @@
   );
 
   $('.btn-return').click(
-    function () {
-      console.log(' delete !!');
-        $('.flip-container__flipper').removeClass('flip');
-        $('.btn-link').show();
-        }
-    )
+      function () {
+          console.log(' delete !!');
+          $('.flip-container__flipper').removeClass('flip');
+          $('.btn-link').show();
+      }
+  );
+
+  $('.icon__hamburger').click(
+      function () {
+          $('.menu-full').addClass('open')
+      }
+  );
+  $('.close-button').click(
+      function () {
+          console.log('test');
+          $('.menu-full').removeClass('open')
+      }
+  )
+
+
+
+
+
 })();
