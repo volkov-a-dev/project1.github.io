@@ -13,17 +13,18 @@ form.login__form
             input.login__form-checkbox(type='checkbox' value='None' id="capcha-checkbox" )
             label.login__form-checkbox-text.fa.fa-check(for='capcha-checkbox')
                 span.login__form-checkbox-text-content Я человек
+
         .login__form-radio-ask
             .login__form-radio-ask-text Вы точно не робот?
-
                 .login__form-radio-answer
-                    label.login__form-radio-text(for='login-yes')
-                        input.login__form-radio(type='radio' name='answer-ask' id='login-yes')
-                        | Да
-                    label.login__form-radio-text(for='login-no')
-                        input.login__form-radio(type='radio' name='answer-ask' id='login-no'  checked )
-                        | Не уверен
+                    input.login__form-radio(type='radio' name='answer-ask' id='login-yes')
+                    label.login__form-radio-text.fa.fa-circle(for='login-yes')
+                        span.login__form-radio-text-content Да
 
-    .contac-form__buttons
-        button(type='button' class='btn btn-return ') На главную
-        button(type='submit' class='btn   ') Отправить
+                    input.login__form-radio(type='radio' name='answer-ask' id='login-no'  checked )
+                    label.login__form-radio-text.fa.fa-circle(for='login-no')
+                        span.login__form-radio-text-content Не уверен
+
+    .login-form__buttons
+        button.btn.btn-login-form.btn-return(type='button') На главную
+        button.btn.btn-login-form(type='submit') Отправить

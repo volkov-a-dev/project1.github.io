@@ -57,7 +57,6 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: $welcome-login-background;
       backface-visibility: hidden;
       transition: 0.9s;
       transform-style: preserve-3d;
@@ -97,8 +96,10 @@
 .welcome {
   overflow: hidden;
 
+
   &__dashboard{
     &-info {
+      background: $welcome-login-background;
       padding: 40px 40px 35px 40px;
     }
 
@@ -176,8 +177,10 @@
 }
 
 .login__form {
+
   &-box {
-    padding: 20px;
+    padding: 20px 20px 30px;
+    background: $welcome-login-background;
   }
 
   &-title {
@@ -226,7 +229,7 @@
       width: 13%;
       height: 100%;
       float: left;
-      background: #f0efe9;
+      background: $login-icon-bg-input;
       position: relative;
       border-radius: 5px 0 0 5px;
     }
@@ -236,7 +239,7 @@
       height: 14px;
       margin-left: 14px;
       position: absolute;
-      fill: #c4cbcd;
+      fill: $login-icon-input;
       top: 50%;
       left: 0;
       transform: translate(0%,-50%);
@@ -256,14 +259,14 @@
     text-align: center;
 
     &-text {
-      margin: 12px 0;
+      margin: 5px 0;
       color: $login-ask-text;
       font-weight: 600;
     }
   }
 
   &-radio-text{
-    margin: 0 25px;
+    margin: 0;
   }
 }
 
@@ -275,10 +278,12 @@
 .login__form-checkbox {
   display: none;
 }
+
 .login__form-checkbox-text {
   display: inline;
   font-family: $robotoReular;
   color: $login-ask-text;
+  cursor: pointer;
 
   &-content{
     vertical-align: -2px;
@@ -301,11 +306,67 @@
 .login__form-checkbox:checked + .login__form-checkbox-text:before {
   color: $login-check-color;
 }
-.login__form-radio:checked{
-  color: red;
+
+.login__form-radio-answer {
+  margin: 7px;
 }
 
+.login__form-radio {
+  display: none;
+}
 
+.login__form-radio-text {
+  display: inline;
+  font-family: $robotoReular;
+  color: $login-ask-text;
+  margin:0  20px;
+  cursor: pointer;
+
+  &-content{
+    vertical-align: -2px;
+  }
+}
+
+.login__form-radio + .login__form-radio-text:before {
+  content: "\f111";
+  display: inline-block;
+  width: 17px;
+  font-size: 9px;
+  height: 17px;
+  line-height: 18px;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 1px;
+  border: 1px solid $login-radio-border;
+  border-radius: 50%;
+  color: transparent;
+  background-color: $login-radio-background ;
+  transition-duration: 0.3s;
+}
+
+.login__form-radio:checked + .login__form-radio-text:before {
+  color: $login-radio-color;
+}
+.login-form__buttons {
+  width: 100%;
+  font-size: 0;
+
+  .btn-login-form{
+    width: 50%;
+    font-family: $fontMedium;
+    background: $login-button-bg-color;
+
+    &:hover {
+      background: $login-button-bg-hover-color;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &:first-child{
+      border-right: 2px solid $login-button-border;
+    }
+  }
+}
 
 .footer-small {
 
@@ -313,5 +374,13 @@
     text-align: center;
     font-family: $robotoLight;
     color: #fff;
+
+    .fa {
+      font-size: 13px;
+    }
+
+    &-item {
+      padding-left: 5px;
+    }
   }
 }
