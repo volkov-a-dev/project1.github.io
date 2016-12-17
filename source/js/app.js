@@ -9,7 +9,6 @@
 
   $('.btn-link').click(
       function () {
-          console.log('ok click !!');
           $('.flip-container__flipper').addClass('flip');
           $(this).hide();
       }
@@ -17,7 +16,6 @@
 
   $('.btn-return').click(
       function () {
-          console.log(' delete !!');
           $('.flip-container__flipper').removeClass('flip');
           $('.btn-link').show();
       }
@@ -30,13 +28,8 @@
   );
   $('.close-button').click(
       function () {
-          console.log('test');
           $('.menu-full').removeClass('open')
       }
   )
-
-
-
-
 
 })();
