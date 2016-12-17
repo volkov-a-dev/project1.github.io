@@ -12,12 +12,11 @@ html
     meta(content="width=device-width, initial-scale=1" name="viewport")
     meta(content="ie=edge" http-equiv="x-ua-compatible")
 
-    //- favicon block start
-    //- favicon block end
+    link(rel='icon' type='image/png' href='/assets/img/fav_mount.png')
 
     link(rel='stylesheet' href='/assets/css/foundation.css')
     link(rel='stylesheet' href='/assets/css/app.css')
-    link(rel='icon' type='image/png' href='/assets/img/fav_mount.png')
+
     script(src='/assets/js/foundation.js' defer)
     script(src='/assets/js/app.js' defer)
 
@@ -32,8 +31,8 @@ html
 
         block content
 
+      .menu-full
+        .close-button X
+        include ./sections/nav
+
     block footer
-
-
-
-

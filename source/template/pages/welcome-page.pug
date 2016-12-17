@@ -1,0 +1,24 @@
+extends ../_template-login
+
+block variables
+    - var title = 'Welcome page'
+
+
+block header
+    .header-welcome
+        button.btn.btn-link Авторизоваться
+
+
+block content
+
+    .flip-container
+        .flip-container__flipper
+            .flip-container__flipper-front
+                include ../sections/_welcome-dashboard
+
+            .flip-container__flipper-back
+                .login
+                    include ../sections/_login-form-section
+
+block footer
+    include ../sections/_small-footer

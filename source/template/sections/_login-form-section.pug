@@ -1,0 +1,30 @@
+form.login__form
+    .login__form-box
+        h1.login__form-title Авторизуйтесь
+        .login__form-group
+            .login__form-group-icon
+                +svg('login')
+            input.login__form-input(type='text'  placeholder='Логин')
+        .login__form-group
+            .login__form-group-icon
+                +svg('password')
+            input.login__form-input(type='password'  placeholder='Пароль')
+        .login__form-capcha-checkbox
+            input.login__form-checkbox(type='checkbox' value='None' id="capcha-checkbox" )
+            label.login__form-checkbox-text.fa.fa-check(for='capcha-checkbox')
+                span.login__form-checkbox-text-content Я человек
+
+        .login__form-radio-ask
+            .login__form-radio-ask-text Вы точно не робот?
+                .login__form-radio-answer
+                    input.login__form-radio(type='radio' name='answer-ask' id='login-yes')
+                    label.login__form-radio-text.fa.fa-circle(for='login-yes')
+                        span.login__form-radio-text-content Да
+
+                    input.login__form-radio(type='radio' name='answer-ask' id='login-no'  checked )
+                    label.login__form-radio-text.fa.fa-circle(for='login-no')
+                        span.login__form-radio-text-content Не уверен
+
+    .login-form__buttons
+        button.btn.btn-login-form.btn-return(type='button') На главную
+        button.btn.btn-login-form(type='submit') Отправить

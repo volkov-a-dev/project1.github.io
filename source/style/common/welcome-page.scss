@@ -1,0 +1,386 @@
+.page-full {
+  background: url("/assets/img/wb.jpg") no-repeat 0 0 ;
+  background-size: cover;
+}
+
+.header-welcome {
+  padding: 25px;
+  min-height:100px;
+  text-align: right;
+
+  .btn-link {
+    width: 180px;
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 1px solid $welcome-border-button-flip;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $welcome-button-flip-bg-hover;
+      color: $welcome-button-flip-color-hover;
+    }
+  }
+}
+
+.flip-container,
+.flip-container__flipper-front,
+.flip-container__flipper-back {
+  width: 380px;
+  border-radius: 5px;
+}
+
+.flip-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .flip .flip-container__flipper-back {
+    transform: rotateY(0deg);
+  }
+
+  .flip .flip-container__flipper-front {
+    transform: rotateY(180deg);
+  }
+
+  &__flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+
+    &-front,
+    &-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      transition: 0.9s;
+      transform-style: preserve-3d;
+      overflow: hidden;
+    }
+
+    &-front {
+      z-index: 2;
+      transform: rotateY(0deg);
+    }
+
+    &-back {
+      transform: rotateY(-180deg);
+    }
+  }
+}
+
+.vertical{
+
+  .flip-container {
+    position: relative;
+  }
+
+  .flip-container__flipper-back {
+    transform: rotateX(180deg);
+  }
+
+  .flip .flip-container__flipper-back {
+    transform: rotateX(0deg);
+  }
+
+  .flip .flip-container__flipper-front {
+    transform: rotateX(180deg);
+  }
+}
+
+.welcome {
+  overflow: hidden;
+
+
+  &__dashboard{
+    &-info {
+      background: $welcome-login-background;
+      padding: 40px 40px 35px 40px;
+    }
+
+    &-my-photo {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+
+    &-title {
+      margin: 15px 0 0 0;
+      text-align: center;
+      font-family: $fontMedium;
+      font-size: 28px;
+      color: $welcome-title;
+    }
+
+    &-second-title {
+      margin: 5px 0;
+      font-size: 16px;
+      text-align: center;
+      font-family: $robotoReular;
+      font-weight: 400;
+      color: $welcome-title;
+    }
+
+    &-social-icon {
+      text-align: center;
+      padding-top: 28px;
+
+      .socials__content-item .icon {
+        fill: $welcome-icon-color;
+        fill-opacity: 0.6;
+
+        &:hover {
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__navigation-social-link {
+    display: inline-block;
+    width: 33.3%;
+    padding: 0;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    height: 45px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 1%;
+      vertical-align: middle;
+    }
+
+    &-text{
+      display: inline-block;
+      vertical-align: middle;
+      font-family: $fontMedium;
+      position: relative;
+    }
+
+    &:hover {
+      background-color: $welcome-login-hover-link;
+    }
+  }
+
+  &__navigation{
+    &-social-link:last-child {
+      border: 0;
+    }
+  }
+}
+
+.login__form {
+
+  &-box {
+    padding: 20px 20px 30px;
+    background: $welcome-login-background;
+  }
+
+  &-title {
+    text-align: center;
+    font-family: $bernierReg;
+    margin: 15px 30px 35px 30px;
+    letter-spacing: 1.2px;
+    color: $login-title-color;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 5px;
+      position: absolute;
+      background: $login-dash-color;
+      top: 50%;
+      left: 0;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 5px;
+      position: absolute;
+      background: $login-dash-color;
+      top: 50%;
+      right: 0;
+    }
+  }
+
+  &-group {
+    margin-bottom: 20px;
+    height: 45px;
+    position: relative;
+
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    &-icon {
+      width: 13%;
+      height: 100%;
+      float: left;
+      background: $login-icon-bg-input;
+      position: relative;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .icon {
+      width: 14px;
+      height: 14px;
+      margin-left: 14px;
+      position: absolute;
+      fill: $login-icon-input;
+      top: 50%;
+      left: 0;
+      transform: translate(0%,-50%);
+    }
+  }
+
+  &-input {
+    float: left;
+    width: 87%;
+    height:100%;
+    padding-left: 20px;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+  }
+
+  &-radio-ask {
+    text-align: center;
+
+    &-text {
+      margin: 5px 0;
+      color: $login-ask-text;
+      font-weight: 600;
+    }
+  }
+
+  &-radio-text{
+    margin: 0;
+  }
+}
+
+.login__form-capcha-checkbox{
+  margin: 20px auto;
+  text-align: center;
+}
+
+.login__form-checkbox {
+  display: none;
+}
+
+.login__form-checkbox-text {
+  display: inline;
+  font-family: $robotoReular;
+  color: $login-ask-text;
+  cursor: pointer;
+
+  &-content{
+    vertical-align: -2px;
+  }
+}
+
+.login__form-checkbox + .login__form-checkbox-text:before {
+  content: "\f00c";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  padding: 1px;
+  border-radius: 3px;
+  color: transparent;
+  background-color: $login-checkbox-bg-color;
+  transition-duration: 0.3s;
+}
+
+.login__form-checkbox:checked + .login__form-checkbox-text:before {
+  color: $login-check-color;
+}
+
+.login__form-radio-answer {
+  margin: 7px;
+}
+
+.login__form-radio {
+  display: none;
+}
+
+.login__form-radio-text {
+  display: inline;
+  font-family: $robotoReular;
+  color: $login-ask-text;
+  margin:0  20px;
+  cursor: pointer;
+
+  &-content{
+    vertical-align: -2px;
+  }
+}
+
+.login__form-radio + .login__form-radio-text:before {
+  content: "\f111";
+  display: inline-block;
+  width: 17px;
+  font-size: 9px;
+  height: 17px;
+  line-height: 18px;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 1px;
+  border: 1px solid $login-radio-border;
+  border-radius: 50%;
+  color: transparent;
+  background-color: $login-radio-background ;
+  transition-duration: 0.3s;
+}
+
+.login__form-radio:checked + .login__form-radio-text:before {
+  color: $login-radio-color;
+}
+.login-form__buttons {
+  width: 100%;
+  font-size: 0;
+
+  .btn-login-form{
+    width: 50%;
+    font-family: $fontMedium;
+    background: $login-button-bg-color;
+
+    &:hover {
+      background: $login-button-bg-hover-color;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &:first-child{
+      border-right: 2px solid $login-button-border;
+    }
+  }
+}
+
+.footer-small {
+
+  &__content {
+    text-align: center;
+    font-family: $robotoLight;
+    color: #fff;
+
+    .fa {
+      font-size: 13px;
+    }
+
+    &-item {
+      padding-left: 5px;
+    }
+  }
+}
