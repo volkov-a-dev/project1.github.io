@@ -8,10 +8,35 @@
   position: relative;
   background: url('/assets/img/bg.jpg')no-repeat 0 0;
   background-size: cover;
+
+  @include laptop {
+    height: 503px;
+  }
+
+  @include tablets {
+    height: 580px;
+    background-position-x: center;
+    background-position-y: center;
+  }
+
+  @include phones {
+    height: 685px;
+    background-position-x: center;
+    background-position-y: center;
+  }
 }
+
 
 .header__content-control-panel{
   padding:30px 30px 0;
+
+  @include tablets {
+    padding:34px 14px 10px 26px ;
+  }
+
+  @include phones {
+    padding: 15px 12px;
+  }
 }
 
 .header__content-title-background {
@@ -25,6 +50,10 @@
   background-size: cover;
   opacity: 0.1;
   z-index: 1;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .arrow__down {
@@ -51,8 +80,16 @@
   background: url('/assets/img/header-blog.jpg') no-repeat 0 0;
   background-size: cover;
 
+  @include phones {
+    height: 687px;
+  }
+
   &-control-panel {
     padding: 30px 30px 0;
+
+    @include phones {
+      padding: 15px 12px 0;
+    }
   }
 }
 
@@ -70,6 +107,12 @@
         height: 142px;
         border-radius: 50%;
         margin: 0 auto;
+
+        @include phones{
+          width: 170px;
+          height: 170px;
+        }
+
       }
     }
 
@@ -83,6 +126,13 @@
         .icon {
           height: 210px;
           margin-top: -45px;
+
+          @include phones{
+            height:130px;
+            margin-top: -25px;
+            width:320px;
+
+          }
         }
       }
     }
@@ -120,6 +170,11 @@
           right: 43px;
           transform: translate(-50%, -50%);
         }
+
+        @include phones {
+          margin-top: 30px;
+          font-size: 40px;
+        }
       }
     }
 
@@ -127,8 +182,16 @@
       text-align: center;
       font-family: $robotoReular;
       color: #fff;
+
+      @include phones{
+        font-size: 19px;
+      }
     }
   }
+  @include phones{
+    margin-top: 100px;
+  }
+
 }
 
 .headline.headline__blog {

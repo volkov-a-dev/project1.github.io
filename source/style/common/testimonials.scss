@@ -1,30 +1,106 @@
 .testimonials {
   background: url('/assets/img/footor-bg.png') no-repeat 0 0;
   background-size: cover;
-  padding-bottom: 155px;
 
   .headline {
     background: rgba(255,255,255, 0.1);
+
+    @include tablets {
+      padding-top: 40px;
+    }
+
+    @include phones {
+      padding-top: 0;
+      padding-bottom: 30px;
+    }
+
+    &__title {
+      @include phones {
+        width:285px;
+        margin: 0 auto;
+      }
+
+      &-text {
+        @include phones {
+          line-height: 1.2;
+
+          &:before {
+            right: 0;
+            width: 27px;
+          }
+          &:after {
+            left: 0;
+            width: 27px;
+          }
+        }
+      }
+    }
+  }
+  @include phones {
+    background-position-x: center;
+    background-position-y: 145px;
   }
 }
+
+
 .testimonials__items {
   width: 780px;
   margin: 0 auto 70px;
   display: flex;
   flex-direction: row;
+
+  @include laptop {
+    width: 100%;
+  }
+
+  @include tablets {
+    width: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  @include phones {
+    display: block;
+    margin-bottom: 25px;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
+
 .testimonial-item{
   width: 50%;
   margin-right: 20px;
   padding-top: 55px;
   background: url('/assets/img/quotes.png') no-repeat 0 0;
 
+  @include  desktop {
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  @include tablets {
+    margin-right: 0;
+    padding-right: 25px;
+  }
+
+  @include phones {
+    width:100%;
+    padding: 32px 13px ;
+    background: url('/assets/img/quotes.png') no-repeat center 0;
+
+  }
 
   &__text {
     font-family: $robotoReular;
     margin-bottom: 25px;
     line-height: 25px;
     word-spacing: 2px;
+
+    @include phones {
+      margin-bottom: 5px;
+      margin-top: 10px;
+      font-size: 17px;
+      line-height: 2;
+    }
   }
   &__user {
     font-family: $robotoBold;
@@ -39,6 +115,12 @@
       overflow: hidden;
       border-radius: 50%;
       text-align: center;
+
+      @include phones {
+        width:61px;
+        height: 61px;
+        margin-right: 24px;
+      }
     }
   }
 }
@@ -47,9 +129,42 @@
   font-family: $robotoBold;
   color: $general-color;
   font-weight: bold;
-  padding-bottom: 5px
+  padding-bottom: 5px;
+
+  @include phones {
+    font-size: 18px;
+    padding-bottom: 12px;
+  }
+
 }
 .testimonial-item__user-description{
   font-family: $robotoReular;
   color: $general-color;
+
+  @include phones {
+    font-size: 19px;
+  }
+}
+
+.arrow-up {
+  text-align: center;
+  padding: 67px;
+  transform: rotate(180deg);
+
+  .icon {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @include  tablets {
+    padding-top: 60px;
+    padding-bottom: 110px;
+  }
+
+  @include phones {
+    padding: 32px;
+  }
 }

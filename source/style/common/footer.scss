@@ -2,53 +2,146 @@
   background: #2f4349;
   color: rgba(255, 255, 255, 0.5);
 }
+.blog-wrapper__footer .footer {
+  @include phones {
+    background: #565b5f;
+  }
+}
 
 .footer-content__first,
 .footer-content__second {
   padding: 0 30px;
+
+  @include desktop {
+    padding: 0 20px;
+  }
+
 }
 
 .footer-content__first {
   height: 74px;
 
-  &-left {
-    padding-top: 28px;
-    display: inline-block;
-
-    .nav__container {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .nav__li {
-      float: left;
-    }
+  @include tablets {
+    height:auto;
+    text-align: center;
   }
 
-  &-right {
+  @include phones {
+    height: auto;
+    text-align: center;
+  }
+}
+
+.footer-content__first-left {
+  padding-top: 28px;
+  display: inline-block;
+
+  .nav__container {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+
+  }
+
+  .nav__li {
+    float: left;
+    @include tablets {
+      float: none;
+      display: inline-block;
+      //margin-left: 10px;
+    }
+
+    @include phones {
+      float: none;
+      display: inline-block;
+      margin-right: 5px;
+
+      .nav__link {
+        margin: 0;
+      }
+    }
+  }
+  @include tablets {
+    padding-top: 34px;
+    width: 100%;
+
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.footer-content__first-right {
     float: right;
     display: inline-block;
     margin-top: 15px;
+
+  @include tablets {
+    float: none;
+    margin-top: 21px;
+    margin-bottom: 22px;
   }
+
+    @include phones{
+      float: none;
+      margin-top: 21px;
+      margin-bottom: 22px;
+    }
 }
+
 
 .footer-content__second {
   margin-bottom: 13px;
   clear: both;
   border-top: 1px solid #44565b;
 
+
   &-left {
     float: left;
     line-height: 25px;
-    font-size: 16px;
     white-space: inherit;
     width: 500px;
     margin-top: 10px;
+
+    @include tablets {
+      float: none;
+      margin-top: 5px;
+      width:100%;
+      padding-top: 8px;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    @include phones {
+      float: none;
+      width:100%;
+      padding-top: 10px;
+      text-align: center;
+      line-height: 1.7;
+    }
   }
 
   &-right {
     float: right;
     margin-top: 30px;
+
+    @include tablets {
+      float: none;
+      margin-top:23px;
+      width:100%;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    @include phones {
+      float: none;
+      margin-top:23px;
+      width:100%;
+      text-align: center;
+      line-height: 1.4;
+    }
 
   }
 }

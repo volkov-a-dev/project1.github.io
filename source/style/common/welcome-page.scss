@@ -8,6 +8,10 @@
   min-height:100px;
   text-align: right;
 
+  @include phones {
+    padding: 13px;
+  }
+
   .btn-link {
     width: 180px;
     padding: 12px 10px;
@@ -16,6 +20,14 @@
     font-weight: 600;
     background: transparent;
     cursor: pointer;
+
+    @include phones {
+      padding: 14px 10px;
+      width: 183px;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
 
     &:hover {
       background-color: $welcome-button-flip-bg-hover;
@@ -29,6 +41,11 @@
 .flip-container__flipper-back {
   width: 380px;
   border-radius: 5px;
+
+  @include  phones {
+    width:370px;
+    border-radius: 5px;
+  }
 }
 
 .flip-container {
@@ -95,52 +112,78 @@
 
 .welcome {
   overflow: hidden;
+}
 
+.welcome__dashboard {
+  &-info {
+    background: $welcome-login-background;
+    padding: 40px 40px 35px 40px;
+    @include phones {
+      margin-top: 31px;
+      padding-bottom: 44px;
+    }
+  }
+  &-my-photo {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    @include phones {
 
-  &__dashboard{
-    &-info {
-      background: $welcome-login-background;
-      padding: 40px 40px 35px 40px;
+      margin-top: 10px;
+      width: 173px;
+      height: 173px;
+    }
+  }
+
+  &-title {
+    margin: 15px 0 0 0;
+    text-align: center;
+    font-family: $fontMedium;
+    font-size: 28px;
+    color: $welcome-title;
+    @include phones {
+      margin-top: 25px;
+    }
+  }
+  &-second-title {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    font-family: $robotoReular;
+    font-weight: 400;
+    color: $welcome-title;
+  }
+
+  &-social-icon {
+    text-align: center;
+    padding-top: 28px;
+
+    @include phones {
+      padding-top: 42px;
     }
 
-    &-my-photo {
-      display: block;
-      margin: 0 auto;
-      border-radius: 50%;
+  .socials__content-item {
+    @include phones {
+      margin-right: 35px;
     }
+    .icon {
+      fill: $welcome-icon-color;
+      fill-opacity: 0.6;
 
-    &-title {
-      margin: 15px 0 0 0;
-      text-align: center;
-      font-family: $fontMedium;
-      font-size: 28px;
-      color: $welcome-title;
-    }
-
-    &-second-title {
-      margin: 5px 0;
-      font-size: 16px;
-      text-align: center;
-      font-family: $robotoReular;
-      font-weight: 400;
-      color: $welcome-title;
-    }
-
-    &-social-icon {
-      text-align: center;
-      padding-top: 28px;
-
-      .socials__content-item .icon {
-        fill: $welcome-icon-color;
-        fill-opacity: 0.6;
-
-        &:hover {
-          fill-opacity: 1;
-        }
+      @include phones {
+        width: 33px;
+        height: 33px;
+      }
+      &:hover {
+        fill-opacity: 1;
       }
     }
   }
 
+  }
+}
+
+.welcome {
   &__navigation-social-link {
     display: inline-block;
     width: 33.3%;
@@ -148,6 +191,22 @@
     border-right: 2px solid rgba(255, 255, 255, 0.7);
     text-align: center;
     height: 45px;
+
+    @include phones {
+      height: 55px;
+      &:first-child {
+        //5
+        width:41.666666667%;
+      }
+      &:nth-child(2) {
+        //4
+        width: 33.333333333%;
+      }
+      &:last-child {
+        width: 25%;
+      }
+
+    }
 
     &:before {
       content: '';
@@ -176,6 +235,9 @@
   }
 }
 
+
+
+
 .login__form {
 
   &-box {
@@ -191,6 +253,11 @@
     color: $login-title-color;
     position: relative;
 
+    @include phones {
+      margin: 20px 14px 40px 8px;
+      font-size: 37px;
+    }
+
     &:before {
       content: '';
       display: inline-block;
@@ -200,6 +267,11 @@
       background: $login-dash-color;
       top: 50%;
       left: 0;
+      @include phones{
+        width: 27px;
+        height: 7px;
+        top: 41%;
+      }
     }
 
     &:after {
@@ -211,13 +283,25 @@
       background: $login-dash-color;
       top: 50%;
       right: 0;
+      @include phones{
+        width: 27px;
+        height: 7px;
+        top: 41%;
+      }
     }
+
   }
 
   &-group {
     margin-bottom: 20px;
-    height: 45px;
+    height: 54px;
     position: relative;
+
+    @include phones {
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-bottom: 25px;
+    }
 
     &:after{
       content: '';
@@ -232,6 +316,10 @@
       background: $login-icon-bg-input;
       position: relative;
       border-radius: 5px 0 0 5px;
+
+      @include phones {
+        width: 17%;
+      }
     }
 
     .icon {
@@ -243,6 +331,13 @@
       top: 50%;
       left: 0;
       transform: translate(0%,-50%);
+
+      @include phones {
+        margin-left: 18px;
+        width: 16px;
+        height: 17px;
+      }
+
     }
   }
 
@@ -253,6 +348,13 @@
     padding-left: 20px;
     border: 0;
     border-radius: 0 5px 5px 0;
+
+    @include phones {
+      width: 83%;
+      padding-left: 25px;
+      font-size: 18px;
+    }
+
   }
 
   &-radio-ask {
@@ -273,6 +375,10 @@
 .login__form-capcha-checkbox{
   margin: 20px auto;
   text-align: center;
+
+  @include phones {
+    margin: 31px auto;
+  }
 }
 
 .login__form-checkbox {
@@ -287,6 +393,12 @@
 
   &-content{
     vertical-align: -2px;
+
+
+    @include phones {
+      font-size: 21px;
+      vertical-align: -5px;
+    }
   }
 }
 
@@ -301,6 +413,12 @@
   color: transparent;
   background-color: $login-checkbox-bg-color;
   transition-duration: 0.3s;
+
+  @include phones {
+    width: 23px;
+    height: 22px;
+    margin-right: 10px;
+  }
 }
 
 .login__form-checkbox:checked + .login__form-checkbox-text:before {
@@ -369,18 +487,58 @@
 }
 
 .footer-small {
+  text-align: center;
+  font-family: $robotoLight;
+  color: #fff;
 
-  &__content {
-    text-align: center;
-    font-family: $robotoLight;
-    color: #fff;
+  .fa {
+    font-size: 13px;
+  }
+}
+.footer-small__content {
+  display: inline-block;
 
-    .fa {
-      font-size: 13px;
-    }
+  @include phones {
+    margin-top: 32px;
+    line-height: 1.75;
+  }
 
-    &-item {
-      padding-left: 5px;
-    }
+}
+
+.footer-small__content-item {
+  @include phones {
+
+  }
+}
+.footer-small__developer {
+  @include phones {
+    display: block;
+    font-size: 17px;
+  }
+}
+.footer-small__my-name {
+  @include phones {
+    margin: 0 5px;
+  }
+}
+.footer-small__text {
+  @include phones {
+    font-size: 16px;
+  }
+}
+.footer-small__create-by {
+  &:after {
+    content: '|';
+    margin:0 3px;
+  }
+
+  @include phones {
+
+  }
+}
+
+.footer-small__year {
+  @include phones {
+    font-size: 16px;
   }
 }

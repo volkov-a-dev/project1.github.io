@@ -1,8 +1,7 @@
 @import 'common-sass/_vars-core';
 @import 'common-sass/_mixins';
 @import 'core/_core';
-
-
+@import 'common/preloader';
 @import 'common/main';
 @import 'common/header';
 @import 'common/icon';
@@ -19,8 +18,3 @@
 @import 'common/about-page';
 @import 'common/blog-page.scss';
 @import 'common/greating';
-
-
-
-
-

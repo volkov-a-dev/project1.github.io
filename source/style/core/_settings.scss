@@ -5,40 +5,91 @@
 .icon__hamburger {
   width: 41px;
   height: 36px;
+
+  @include phones {
+    width:27px;
+    height: 25px;
+  }
 }
 
 .icon__vk {
   width: 34px;
   height: 28px;
+
+  @include phones {
+    width:27px;
+    height: 25px;
+  }
 }
 
 .icon__github {
   width: 33px;
   height: 23px;
+
+  @include phones {
+    width:27px;
+    height: 25px;
+  }
 }
 
 .icon__in {
   width: 33px;
   height: 23px;
+
+  @include phones {
+    width:27px;
+    height: 25px;
+  }
 }
 
 .icon__arrow_down {
   width: 32px;
+
 }
 
 .icon__vk_round {
   width: 36px;
   height:36px;
+
+  @include tablets {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include phones{
+    width: 43px;
+    height: 43px;
+  }
 }
 
 .icon__github_round {
   width: 36px;
   height:36px;
+
+  @include tablets {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include phones{
+    width: 43px;
+    height: 43px;
+  }
 }
 
 .icon__in_round{
   width: 36px;
   height:36px;
+
+  @include tablets {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include phones{
+    width: 43px;
+    height: 43px;
+  }
 }
 
 .icon__portf_arrow_down {
@@ -53,6 +104,11 @@
   width: 43px;
   height: 27px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+
+  @include phones {
+    width: 43px;
+    height: 100%;
+  }
 }
 
 .icon__portf_arrow_up {
@@ -67,6 +123,11 @@
   width: 43px;
   height: 27px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+
+  @include phones {
+    width: 52px;
+    height: 100%;
+  }
 }
 
 .icon__link {

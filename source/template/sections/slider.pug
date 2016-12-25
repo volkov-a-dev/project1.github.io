@@ -1,21 +1,17 @@
-.slider
-    .slider__info
-        .slider__info-content
-            .slider__info-content-text Сайт школы онлайн образования
-            .slider__info-content-skills html, css, javascript
+section.slider
+    .slider__left
+        .slider__display
+            img.slider__display-image(src='/assets/img/content/work-1.png' alt='looftshool')
+        .slider__info
+            .title Сайт школы онлайн образования
+            .skills html, css, javascript
             +button('link', '#', 'slider_link', 'Посмотреть сайт')
 
-    .slider__items
-        .slider__item.slider__active-item
-            img.slider__item-image(src='/assets/img/content/work-1.png' alt='looftshool')
-        .slider__group-items
+    .slider__right
+        .slider__controls
             .slider__item
                 +svg('portf_arrow_down')
                 img.slider__item-image(src='/assets/img/content/work-2.png' alt='looftshool')
             .slider__item
                 +svg('portf_arrow_up')
                 img.slider__item-image(src='/assets/img/content/work-3.png' alt='looftshool')
-
-
-
-

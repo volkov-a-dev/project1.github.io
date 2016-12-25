@@ -2,9 +2,12 @@
     .headline
         .headline__title
             +svg('about_header')
-            h2.headline__title-text Что обо мне <br> говорят
+            h2.headline__title-text Что обо мне говорят
 
     .testimonials__items
         +testimonial(testimonialItem)
 
     include ./main-contact-form
+
+    .arrow-up
+        +svg('arrow_down')

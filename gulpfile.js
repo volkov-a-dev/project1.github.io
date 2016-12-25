@@ -12,6 +12,7 @@ global.$ = {
   gulp: require('gulp'),
   del: require('del'),
   sprite: require('gulp.spritesmith'),
+  cssunit : require('gulp-css-unit'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };

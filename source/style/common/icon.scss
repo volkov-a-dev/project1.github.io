@@ -13,6 +13,13 @@
       fill-opacity: 1;
     }
   }
+  @include tablets {
+    margin-right: 30px;
+  }
+
+  @include phones {
+    margin-right: 35px;
+  }
 }
 
 .nav__hamburger-icons {
@@ -22,6 +29,10 @@
 
 .social__link-footor {
   margin-left: 6px;
+  @include tablets {
+    margin-left: 0;
+    margin-right: 6px;
+  }
 }
 
 .socials-footer {
@@ -38,6 +49,18 @@
       fill: #fff;
       border: 0 solid #2f4349;
       background: #2f4349;
+    }
+  }
+}
+.blog-wrapper__footer {
+  .socials-footer {
+    .icon {
+      fill: #565b5f;
+      &:hover {
+        background: #5b5e63;
+        border: 0 solid #a9acae;
+        fill: #fff;
+      }
     }
   }
 }

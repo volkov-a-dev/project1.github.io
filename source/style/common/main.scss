@@ -8,6 +8,14 @@ html, body {
 
   .page__conten-padding-bottom {
     padding-bottom: 141px;
+
+    @include tablets {
+      padding-bottom: 268px;
+    }
+
+    @include phones {
+      padding-bottom: 320px;
+    }
   }
 }
 
@@ -29,7 +37,7 @@ html, body {
   bottom: 0;
   background: rgba(38,166,154, 0.7);
   z-index: 999;
-  
+
 
 
   .close-button {
@@ -41,6 +49,10 @@ html, body {
     font-weight: 600;
     cursor: pointer;
     z-index: 1000;
+    @include phones {
+      margin-right:15px;
+      margin-top: 15px;
+    }
   }
 
   .nav__container {
@@ -57,12 +69,21 @@ html, body {
       text-align: center;
       margin: 20px 0;
 
+      @include phones {
+        margin: 23px 0;
+
+      }
+
       .nav__link {
         font-family: $bernierReg;
         position: relative;
         margin: 0;
         padding-right: 40px;
         padding-left: 40px;
+
+        @include phones{
+          font-size: 45px;
+        }
 
         &:hover {
           color: #fff;
@@ -105,9 +126,25 @@ html, body {
 .footer {
   height: 141px;
   margin-top: -141px;
+
+  @include tablets {
+    height: 268px;
+    margin-top: -268px;
+  }
+
+  @include phones {
+    height: 340px;
+    margin-top: -340px;
+  }
 }
 
 .footer-small {
   height: 50px;
   margin-top: -50px;
+
+  @include phones {
+    height: 101px;
+    margin-top: -101px;
+  }
+
 }
