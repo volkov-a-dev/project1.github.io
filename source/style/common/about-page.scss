@@ -8,188 +8,277 @@
     fill: $section-about-background-2;
   }
 }
-
 .container-about {
   height: 830px;
 
-  &__content {
-    padding-right: 15px;
-    padding-left: 15px;
+  @include phones {
+    height: auto;
   }
-  &__background-right,
-  &__background-left {
-    float: left;
-    width: 50%;
+}
+.container-about__content {
+  padding-right: 15px;
+  padding-left: 15px;
+  @include phones {
+    padding: 0;
+  }
+}
+
+.container-about__background-right,
+.container-about__background-left {
+  float: left;
+  width: 50%;
+
+  @include phones {
+    float: none;
+    width:100%;
+    height: auto;
+  }
+}
+
+.container-about__background-left{
+  background: $section-about-background-1;
+  height:100%;
+}
+
+.container-about__title {
+  position: relative;
+  text-align: center;
+  width: 260px;
+  display: inline-block;
+  margin-top: 5px;
+  vertical-align: top;
+  letter-spacing: 1.5px;
+
+  @include phones {
+    width:100%;
+    padding-top: 26px;
   }
 
-  &__background-left{
-    background: $section-about-background-1;
-    height:100%;
-  }
+  .icon {
+    position: absolute;
+    top: -50px;
+    left: 0;
 
-  &__title {
-    position: relative;
-    text-align: center;
-    width: 260px;
-    display: inline-block;
-    margin-top: 5px;
-    vertical-align: top;
-    letter-spacing: 1.5px;
-
-    .icon {
-      position: absolute;
-      top: -50px;
-      left: 0px;
-    }
-
-    &-general{
-      font-family: $bernierReg;
-      position: relative;
-      display: inline-block;
-      margin: 0;
-      font-size: 63px;
-      color: $title-color;
-
-      &:after {
-        content: '';
-        position: absolute;
-        left: -42px;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        width: 22px;
-        height: 5px;
-        z-index: 1;
-        background: $title-hyphen-color ;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        right: -42px;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        width: 22px;
-        height: 5px;
-        z-index: 1;
-        background: $title-hyphen-color;
-      }
+    @include phones {
+      width: 242px;
+      left: 50%;
+      transform: translate(-50%);
+      fill: #e6e5e0;
     }
   }
-  &__my-small-summary{
-    display: inline-block;
-    vertical-align: top;
-    width: 444px;
-    margin-top: 20px;
-    margin-left: 56px;
+}
+
+.container-about__title-general{
+  font-family: $bernierReg;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  font-size: 63px;
+  color: $title-color;
+
+  @include phones {
+    font-size: 42px;
+    letter-spacing: 1.4px;
   }
 
-  &__my-photo {
+  &:after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 5px;
+    left: -42px;
+    top: 50%;
+    z-index: 1;
+    background: $title-hyphen-color ;
+    transform: translateY(-50%);
+
+    @include phones {
+      left: -48px;
+      width: 27px;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: -42px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 5px;
+    z-index: 1;
+    background: $title-hyphen-color;
+
+    @include phones {
+      right: -48px;
+      width: 27px;
+    }
+  }
+}
+.container-about__my-small-summary{
+  display: inline-block;
+  vertical-align: top;
+  width: 444px;
+  margin-top: 20px;
+  margin-left: 56px;
+
+  @include phones {
+    margin-left: 0;
+    margin-top: 27px;
     width: 100%;
-    overflow: hidden;
-    height: 390px;
-    margin-bottom: 30px;
+  }
+}
+.container-about__my-photo {
+  width: 100%;
+  overflow: hidden;
+  height: 390px;
+  margin-bottom: 30px;
+  @include phones {
+    max-height: 348px;
+    margin-bottom: 15px;
+  }
+}
+.container-about__who-am-i {
+  color: $title-second;
+  font-family: $bernierReg;
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  width: 180px;
+  margin: 0 auto 27px;
+
+  @include phones {
+    font-size: 25px;
+    margin-top: 14px;
+    width: 156px;
+    margin-bottom: 14px;
   }
 
-  &__who-am-i {
-    color: $title-second;
-    font-family: $bernierReg;
-    position: relative;
-    text-align: center;
-    font-size: 35px;
-    width: 180px;
-    margin: 0 auto 27px;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 5px;
+    z-index: 1;
+    background: $title-hyphen-color;
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
+    @include  phones {
+      width: 27px;
+      height: 7px;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 5px;
+    z-index: 1;
+    background: $title-hyphen-color;
+
+    @include  phones {
+      width: 27px;
+      height: 7px;
+    }
+  }
+}
+.container-about__content-text {
+  font-family: $robotoReular;
+  margin: 10px 20px 10px 5px;
+  line-height: 1.56;
+  color: $text;
+
+  @include phones {
+    margin: 0;
+    padding: 0 18px 15px 10px;
+
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+.container-about__background-right {
+  height:100%;
+  background: $section-about-background-2;
+
+  @include phones {
+    padding-top: 30px;
+    .container-about__content-text {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.container-about__title-second {
+  color: #455a64;
+  font-family: $bernierReg;
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  width: 305px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include phones {
+    font-size: 27px;
+    width: 258px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 5px;
+    z-index: 1;
+    background: $title-hyphen-color ;
+    @include  phones {
       top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 20px;
-      height: 5px;
-      z-index: 1;
-      background: $title-hyphen-color ;
+      width: 28px;
+      height: 7px;
     }
+  }
 
-    &:before {
-      content: '';
-      position: absolute;
-      right: 0;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 25%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 5px;
+    z-index: 1;
+    background: $title-hyphen-color;
+    @include  phones {
       top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 20px;
-      height: 5px;
-      z-index: 1;
-      background: $title-hyphen-color;
+      width: 28px;
+      height: 7px;
     }
   }
+}
 
-  &__content-text {
-    font-family: $robotoReular;
-    margin: 10px 20px 10px 5px;
-    line-height: 1.56;
-    color: $text;
-  }
-
-  &__background-right {
-    height:100%;
-    background: $section-about-background-2;
-
-  }
-  &__title-second {
-    color: #455a64;
-    font-family: $bernierReg;
-    position: relative;
-    text-align: center;
-    font-size: 35px;
-    width: 305px;
-    margin: 0 auto;
-    padding: 0 40px;
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 25%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 20px;
-      height: 5px;
-      z-index: 1;
-      background: $title-hyphen-color ;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 25%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 20px;
-      height: 5px;
-      z-index: 1;
-      background: $title-hyphen-color;
-    }
-  }
-  &__content-wrapper {
+.container-about__content-wrapper {
     margin: 15px 20px;
+  @include phones {
+    margin: 0;
   }
-
 }
 
 .direction {
   margin-top: 56px;
+  @include phones {
+    margin: 0;
+  }
 }
 
 .direction__wrapper-name {
@@ -197,11 +286,22 @@
   font-size: 28px;
   color: $title-second;
   margin: 20px 0 18px 0;
+
+  @include phones {
+    margin: 5px;
+    font-size: 26px;
+    text-align: center;
+  }
 }
 
 .direction__wrapper-item {
   display: inline-block;
   margin-right: 32px;
+
+  @include phones {
+    margin-left: 40px;
+    margin-right: 20px;
+  }
 }
 
 .direction__wrapper {

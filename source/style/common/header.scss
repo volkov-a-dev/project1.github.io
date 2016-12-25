@@ -66,6 +66,10 @@
   transform: translateX(-50%);
   fill:#fff;
 
+  @include phones{
+    bottom:60px;
+  }
+
   .icon {
     fill-opacity: 0.8;
 

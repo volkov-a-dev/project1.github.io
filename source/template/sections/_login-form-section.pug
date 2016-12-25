@@ -15,7 +15,8 @@ form.login__form
                 span.login__form-checkbox-text-content Я человек
 
         .login__form-radio-ask
-            .login__form-radio-ask-text Вы точно не робот?
+            .login__form-radio-ask-text
+                span.login__form-text-ask Вы точно не робот?
                 .login__form-radio-answer
                     input.login__form-radio(type='radio' name='answer-ask' id='login-yes')
                     label.login__form-radio-text.fa.fa-circle(for='login-yes')
@@ -27,4 +28,4 @@ form.login__form
 
     .login-form__buttons
         button.btn.btn-login-form.btn-return(type='button') На главную
-        button.btn.btn-login-form(type='submit') Отправить
+        button.btn.btn-login-form(type='submit') Войти

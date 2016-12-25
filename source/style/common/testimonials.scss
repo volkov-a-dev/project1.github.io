@@ -120,6 +120,16 @@
         width:61px;
         height: 61px;
         margin-right: 24px;
+        position: relative;
+      }
+
+      &-img {
+        @include phones {
+          left: 0;
+          position: absolute;
+          top: -7px;
+          width: 70px;
+        }
       }
     }
   }
@@ -165,6 +175,8 @@
   }
 
   @include phones {
-    padding: 32px;
+    padding-bottom: 60px;
+    padding-top: 62px;
+
   }
 }

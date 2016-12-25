@@ -10,6 +10,7 @@
 
   @include phones {
     padding: 13px;
+    margin-bottom: 62px;
   }
 
   .btn-link {
@@ -22,11 +23,12 @@
     cursor: pointer;
 
     @include phones {
-      padding: 14px 10px;
-      width: 183px;
+      padding: 14px 13px;
+      width: 180px;
       display: block;
       margin: 0 auto;
       text-align: center;
+      font-size: 17px;
     }
 
     &:hover {
@@ -44,7 +46,7 @@
 
   @include  phones {
     width:370px;
-    border-radius: 5px;
+    border-radius: 8px;
   }
 }
 
@@ -119,16 +121,15 @@
     background: $welcome-login-background;
     padding: 40px 40px 35px 40px;
     @include phones {
-      margin-top: 31px;
-      padding-bottom: 44px;
+      padding-bottom: 45px;
     }
   }
+
   &-my-photo {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
     @include phones {
-
       margin-top: 10px;
       width: 173px;
       height: 173px;
@@ -152,6 +153,11 @@
     font-family: $robotoReular;
     font-weight: 400;
     color: $welcome-title;
+
+    @include phones {
+      margin-top: 8px;
+      font-size: 18px;
+    }
   }
 
   &-social-icon {
@@ -159,7 +165,7 @@
     padding-top: 28px;
 
     @include phones {
-      padding-top: 42px;
+      padding-top: 36px;
     }
 
   .socials__content-item {
@@ -235,141 +241,143 @@
   }
 }
 
+.login__form-box {
+  padding: 20px 20px 30px;
+  background: $welcome-login-background;
 
+  @include phones {
+    padding-bottom: 25px;
+  }
+}
 
+.login__form-title {
+  text-align: center;
+  font-family: $bernierReg;
+  margin: 15px 30px 35px 30px;
+  letter-spacing: 1.2px;
+  color: $login-title-color;
+  position: relative;
 
-.login__form {
-
-  &-box {
-    padding: 20px 20px 30px;
-    background: $welcome-login-background;
+  @include phones {
+    margin: 20px 14px 40px 8px;
+    font-size: 37px;
   }
 
-  &-title {
-    text-align: center;
-    font-family: $bernierReg;
-    margin: 15px 30px 35px 30px;
-    letter-spacing: 1.2px;
-    color: $login-title-color;
-    position: relative;
-
-    @include phones {
-      margin: 20px 14px 40px 8px;
-      font-size: 37px;
-    }
-
-    &:before {
-      content: '';
-      display: inline-block;
-      width: 22px;
-      height: 5px;
-      position: absolute;
-      background: $login-dash-color;
-      top: 50%;
-      left: 0;
-      @include phones{
-        width: 27px;
-        height: 7px;
-        top: 41%;
-      }
-    }
-
-    &:after {
-      content: '';
-      display: inline-block;
-      width: 22px;
-      height: 5px;
-      position: absolute;
-      background: $login-dash-color;
-      top: 50%;
-      right: 0;
-      @include phones{
-        width: 27px;
-        height: 7px;
-        top: 41%;
-      }
-    }
-
-  }
-
-  &-group {
-    margin-bottom: 20px;
-    height: 54px;
-    position: relative;
-
-    @include phones {
-      margin-left: 5px;
-      margin-right: 5px;
-      margin-bottom: 25px;
-    }
-
-    &:after{
-      content: '';
-      display: block;
-      clear: both;
-    }
-
-    &-icon {
-      width: 13%;
-      height: 100%;
-      float: left;
-      background: $login-icon-bg-input;
-      position: relative;
-      border-radius: 5px 0 0 5px;
-
-      @include phones {
-        width: 17%;
-      }
-    }
-
-    .icon {
-      width: 14px;
-      height: 14px;
-      margin-left: 14px;
-      position: absolute;
-      fill: $login-icon-input;
-      top: 50%;
-      left: 0;
-      transform: translate(0%,-50%);
-
-      @include phones {
-        margin-left: 18px;
-        width: 16px;
-        height: 17px;
-      }
-
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 5px;
+    position: absolute;
+    background: $login-dash-color;
+    top: 50%;
+    left: 0;
+    @include phones{
+      width: 27px;
+      height: 7px;
+      top: 41%;
     }
   }
 
-  &-input {
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 5px;
+    position: absolute;
+    background: $login-dash-color;
+    top: 50%;
+    right: 0;
+    @include phones{
+      width: 27px;
+      height: 7px;
+      top: 41%;
+    }
+  }
+}
+.login__form-group {
+  margin-bottom: 20px;
+  height: 54px;
+  position: relative;
+
+  @include phones {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 25px;
+  }
+
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  &-icon {
+    width: 13%;
+    height: 100%;
     float: left;
-    width: 87%;
-    height:100%;
-    padding-left: 20px;
-    border: 0;
-    border-radius: 0 5px 5px 0;
+    background: $login-icon-bg-input;
+    position: relative;
+    border-radius: 5px 0 0 5px;
 
     @include phones {
-      width: 83%;
-      padding-left: 25px;
-      font-size: 18px;
-    }
-
-  }
-
-  &-radio-ask {
-    text-align: center;
-
-    &-text {
-      margin: 5px 0;
-      color: $login-ask-text;
-      font-weight: 600;
+      width: 17%;
     }
   }
 
-  &-radio-text{
-    margin: 0;
+  .icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 14px;
+    position: absolute;
+    fill: $login-icon-input;
+    top: 50%;
+    left: 0;
+    transform: translate(0%,-50%);
+
+    @include phones {
+      margin-left: 18px;
+      width: 16px;
+      height: 17px;
+    }
+
   }
+}
+
+.login__form-input {
+  float: left;
+  width: 87%;
+  height:100%;
+  padding-left: 20px;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+
+  @include phones {
+    width: 83%;
+    padding-left: 25px;
+    font-size: 18px;
+  }
+}
+
+.login__form-radio-ask {
+  text-align: center;
+
+  &-text {
+    margin: 5px 0;
+    color: $login-ask-text;
+    font-weight: 600;
+
+    @include phones {
+      margin: 22px 0;
+    }
+  }
+}
+.login__form-text-ask {
+  font-size: 21px;
+}
+
+.login__form-radio-text{
+  margin: 0;
 }
 
 .login__form-capcha-checkbox{
@@ -377,7 +385,7 @@
   text-align: center;
 
   @include phones {
-    margin: 31px auto;
+    margin: 31px auto 10px;
   }
 }
 
@@ -393,7 +401,6 @@
 
   &-content{
     vertical-align: -2px;
-
 
     @include phones {
       font-size: 21px;
@@ -427,6 +434,11 @@
 
 .login__form-radio-answer {
   margin: 7px;
+
+  @include phones {
+    margin-top: 12px;
+  }
+
 }
 
 .login__form-radio {
@@ -440,8 +452,17 @@
   margin:0  20px;
   cursor: pointer;
 
+  @include phones {
+    margin: 0 31px;
+  }
+
   &-content{
     vertical-align: -2px;
+    @include phones {
+      vertical-align: middle;
+      font-size: 17px;
+    }
+
   }
 }
 
@@ -460,6 +481,11 @@
   color: transparent;
   background-color: $login-radio-background ;
   transition-duration: 0.3s;
+
+  @include phones {
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .login__form-radio:checked + .login__form-radio-text:before {
@@ -474,6 +500,9 @@
     font-family: $fontMedium;
     background: $login-button-bg-color;
 
+    @include phones {
+      height: 55px;
+    }
     &:hover {
       background: $login-button-bg-hover-color;
       cursor: pointer;
