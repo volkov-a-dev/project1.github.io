@@ -36,12 +36,12 @@
       }
     }
   }
+
   @include phones {
     background-position-x: center;
     background-position-y: 145px;
   }
 }
-
 
 .testimonials__items {
   width: 780px;
@@ -58,6 +58,7 @@
     margin-left: 25px;
     margin-right: 25px;
   }
+
   @include phones {
     display: block;
     margin-bottom: 25px;
@@ -86,7 +87,6 @@
     width:100%;
     padding: 32px 13px ;
     background: url('/assets/img/quotes.png') no-repeat center 0;
-
   }
 
   &__text {
@@ -102,6 +102,7 @@
       line-height: 2;
     }
   }
+
   &__user {
     font-family: $robotoBold;
     display: flex;
@@ -145,9 +146,9 @@
     font-size: 18px;
     padding-bottom: 12px;
   }
-
 }
-.testimonial-item__user-description{
+
+.testimonial-item__user-description {
   font-family: $robotoReular;
   color: $general-color;
 
@@ -177,6 +178,5 @@
   @include phones {
     padding-bottom: 60px;
     padding-top: 62px;
-
   }
 }

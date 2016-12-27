@@ -13,8 +13,8 @@
   @include phones {
     margin-top: 85px;
   }
-
 }
+
 .profile__personal{
   position: absolute;
   left: 50%;
@@ -46,7 +46,6 @@
   }
 
   &-description {
-
     &-title{
       font-family: $fontMedium;
       color: #fff;
@@ -75,7 +74,6 @@
         width: 250px;
         margin-top:12px;
         font-size: 17px;
-
       }
     }
   }

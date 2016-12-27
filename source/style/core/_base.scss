@@ -1,10 +1,9 @@
 * {
   box-sizing: border-box;
   font-family: $robotoLight;
-
 }
-html {
 
+html {
   @include desktop {
     font-size: 16px;
   }
@@ -30,13 +29,11 @@ a {
   text-decoration: none;
 }
 
-
 .icon {
   line-height: 15px;
   display: inline-block;
   fill: #fff;
   fill-opacity: 1;
-
 }
 
 .btn {
@@ -57,10 +54,10 @@ a {
     margin-right: 10px;
     fill: #fff;
   }
+
   @include  tablets {
     padding: 17px 35px;
   }
-
   @include phones {
     font-size: 18px;
     font-family: $fontMedium ;
