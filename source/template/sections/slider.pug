@@ -1,7 +1,33 @@
 section.slider
     .slider__left
-        .slider__display
-            img.slider__display-image(src='/assets/img/content/work-1.png' alt='looftshool')
+        .slider__block-display
+            .slider__display
+                ul.slider__display-lists
+                    li.slider__display-item.active(data-title="Сайт школы онлайн образования#1"
+                    data-skills="HTML CSS JS"
+                    data-link="#"
+                    data-previous-src="/assets/img/content/work-4.png"
+                    data-next-src="/assets/img/content/work-2.png")
+                        img.slider__display-image(src='/assets/img/content/work-1.png' alt='looftshool')
+                    li.slider__display-item(data-title="Сайт школы онлайн образования #2"
+                    data-skills="HTML"
+                    data-link="#"
+                    data-previous-src="/assets/img/content/work-1.png"
+                    data-next-src="/assets/img/content/work-3.png")
+                        img.slider__display-image(src='/assets/img/content/work-2.png' alt='looftshool')
+                    li.slider__display-item(data-title="Сайт школы онлайн образования #3"
+                    data-skills="JS"
+                    data-link="#"
+                    data-previous-src="/assets/img/content/work-2.png"
+                    data-next-src="/assets/img/content/work-4.png")
+                        img.slider__display-image(src='/assets/img/content/work-3.png' alt='looftshool')
+                    li.slider__display-item(data-title="Сайт школы онлайн образования #4"
+                    data-skills="CSS JS"
+                    data-link="#"
+                    data-previous-src="/assets/img/content/work-3.png"
+                    data-next-src="/assets/img/content/work-1.png")
+                        img.slider__display-image(src='/assets/img/content/work-4.png' alt='looftshool')
+
         .slider__info
             .title Сайт школы онлайн образования
             .skills html, css, javascript
@@ -9,9 +35,9 @@ section.slider
 
     .slider__right
         .slider__controls
-            .slider__item
+            .slider__item.first_slider
                 +svg('portf_arrow_down')
-                img.slider__item-image(src='/assets/img/content/work-2.png' alt='looftshool')
-            .slider__item
+                img.slider__item-image
+            .slider__item.second_slider
                 +svg('portf_arrow_up')
-                img.slider__item-image(src='/assets/img/content/work-3.png' alt='looftshool')
+                img.slider__item-image

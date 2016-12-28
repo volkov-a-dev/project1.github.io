@@ -1,10 +1,11 @@
 .socials {
   display: inline-block;
 }
+
 .socials__content-item{
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
-    margin-right: 18px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 18px;
 
   .icon {
     fill-opacity: 0.8;
@@ -13,6 +14,7 @@
       fill-opacity: 1;
     }
   }
+
   @include tablets {
     margin-right: 30px;
   }
@@ -29,6 +31,7 @@
 
 .social__link-footor {
   margin-left: 6px;
+
   @include tablets {
     margin-left: 0;
     margin-right: 6px;
@@ -41,7 +44,7 @@
 .socials-footer {
   font-family: $fontMedium;
 
-  .icon{
+  .icon {
     background: #a9acae;
     border-radius: 50%;
     border: 1px solid #a9acae;
@@ -55,10 +58,12 @@
     }
   }
 }
+
 .blog-wrapper__footer {
   .socials-footer {
     .icon {
       fill: #565b5f;
+
       &:hover {
         background: #5b5e63;
         border: 0 solid #a9acae;

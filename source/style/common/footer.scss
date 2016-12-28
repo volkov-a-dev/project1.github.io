@@ -2,6 +2,7 @@
   background: #2f4349;
   color: rgba(255, 255, 255, 0.5);
 }
+
 .blog-wrapper__footer .footer {
   @include phones {
     background: #565b5f;
@@ -15,7 +16,6 @@
   @include desktop {
     padding: 0 20px;
   }
-
 }
 
 .footer-content__first {
@@ -41,8 +41,10 @@
     padding: 0;
     list-style: none;
   }
+
   .nav__li {
     float: left;
+
     @include tablets {
       float: none;
       display: inline-block;
@@ -58,6 +60,7 @@
       }
     }
   }
+
   @include tablets {
     padding-top: 34px;
     width: 100%;
@@ -70,9 +73,9 @@
 }
 
 .footer-content__first-right {
-    float: right;
-    display: inline-block;
-    margin-top: 15px;
+  float: right;
+  display: inline-block;
+  margin-top: 15px;
 
   @include tablets {
     float: none;
@@ -80,19 +83,17 @@
     margin-bottom: 22px;
   }
 
-    @include phones{
-      float: none;
-      margin-top: 21px;
-      margin-bottom: 22px;
-    }
+  @include phones{
+    float: none;
+    margin-top: 21px;
+    margin-bottom: 22px;
+  }
 }
-
 
 .footer-content__second {
   margin-bottom: 13px;
   clear: both;
   border-top: 1px solid #44565b;
-
 
   &-left {
     float: left;
@@ -138,6 +139,5 @@
       text-align: center;
       line-height: 1.4;
     }
-
   }
 }

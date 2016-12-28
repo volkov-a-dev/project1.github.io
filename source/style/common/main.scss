@@ -19,7 +19,6 @@ html, body {
   }
 }
 
-
 .body-overflow {
   overflow: hidden;
 }
@@ -38,8 +37,6 @@ html, body {
   background: rgba(38,166,154, 0.7);
   z-index: 999;
 
-
-
   .close-button {
     float: right;
     margin-top:20px;
@@ -49,6 +46,7 @@ html, body {
     font-weight: 600;
     cursor: pointer;
     z-index: 1000;
+
     @include phones {
       margin-right:15px;
       margin-top: 15px;
@@ -71,7 +69,6 @@ html, body {
 
       @include phones {
         margin: 23px 0;
-
       }
 
       .nav__link {
@@ -98,6 +95,7 @@ html, body {
             background: rgba(255,255,255, 0.3);
 
           }
+
           &:before {
             content: '';
             position: absolute;
@@ -146,5 +144,4 @@ html, body {
     height: 101px;
     margin-top: -101px;
   }
-
 }

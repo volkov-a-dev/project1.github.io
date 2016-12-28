@@ -44,7 +44,7 @@
   width: 380px;
   border-radius: 5px;
 
-  @include  phones {
+  @include phones {
     width:370px;
     border-radius: 8px;
   }
@@ -129,6 +129,7 @@
     display: block;
     margin: 0 auto;
     border-radius: 50%;
+
     @include phones {
       margin-top: 10px;
       width: 173px;
@@ -142,10 +143,12 @@
     font-family: $fontMedium;
     font-size: 28px;
     color: $welcome-title;
+
     @include phones {
       margin-top: 25px;
     }
   }
+
   &-second-title {
     margin: 5px 0;
     font-size: 16px;
@@ -168,24 +171,25 @@
       padding-top: 36px;
     }
 
-  .socials__content-item {
-    @include phones {
-      margin-right: 35px;
-    }
-    .icon {
-      fill: $welcome-icon-color;
-      fill-opacity: 0.6;
-
+    .socials__content-item {
       @include phones {
-        width: 33px;
-        height: 33px;
+        margin-right: 35px;
       }
-      &:hover {
-        fill-opacity: 1;
+
+      .icon {
+        fill: $welcome-icon-color;
+        fill-opacity: 0.6;
+
+        @include phones {
+          width: 33px;
+          height: 33px;
+        }
+
+        &:hover {
+          fill-opacity: 1;
+        }
       }
     }
-  }
-
   }
 }
 
@@ -201,17 +205,14 @@
     @include phones {
       height: 55px;
       &:first-child {
-        //5
         width:41.666666667%;
       }
       &:nth-child(2) {
-        //4
         width: 33.333333333%;
       }
       &:last-child {
         width: 25%;
       }
-
     }
 
     &:before {
@@ -222,7 +223,7 @@
       vertical-align: middle;
     }
 
-    &-text{
+    &-text {
       display: inline-block;
       vertical-align: middle;
       font-family: $fontMedium;
@@ -272,6 +273,7 @@
     background: $login-dash-color;
     top: 50%;
     left: 0;
+
     @include phones{
       width: 27px;
       height: 7px;
@@ -288,6 +290,7 @@
     background: $login-dash-color;
     top: 50%;
     right: 0;
+
     @include phones{
       width: 27px;
       height: 7px;
@@ -295,6 +298,7 @@
     }
   }
 }
+
 .login__form-group {
   margin-bottom: 20px;
   height: 54px;
@@ -306,7 +310,7 @@
     margin-bottom: 25px;
   }
 
-  &:after{
+  &:after {
     content: '';
     display: block;
     clear: both;
@@ -340,7 +344,6 @@
       width: 16px;
       height: 17px;
     }
-
   }
 }
 
@@ -376,11 +379,11 @@
   font-size: 21px;
 }
 
-.login__form-radio-text{
+.login__form-radio-text {
   margin: 0;
 }
 
-.login__form-capcha-checkbox{
+.login__form-capcha-checkbox {
   margin: 20px auto;
   text-align: center;
 
@@ -399,7 +402,7 @@
   color: $login-ask-text;
   cursor: pointer;
 
-  &-content{
+  &-content {
     vertical-align: -2px;
 
     @include phones {
@@ -438,7 +441,6 @@
   @include phones {
     margin-top: 12px;
   }
-
 }
 
 .login__form-radio {
@@ -456,13 +458,12 @@
     margin: 0 31px;
   }
 
-  &-content{
+  &-content {
     vertical-align: -2px;
     @include phones {
       vertical-align: middle;
       font-size: 17px;
     }
-
   }
 }
 
@@ -491,6 +492,7 @@
 .login__form-radio:checked + .login__form-radio-text:before {
   color: $login-radio-color;
 }
+
 .login-form__buttons {
   width: 100%;
   font-size: 0;
@@ -503,6 +505,7 @@
     @include phones {
       height: 55px;
     }
+
     &:hover {
       background: $login-button-bg-hover-color;
       cursor: pointer;
@@ -524,6 +527,7 @@
     font-size: 13px;
   }
 }
+
 .footer-small__content {
   display: inline-block;
 
@@ -531,7 +535,6 @@
     margin-top: 32px;
     line-height: 1.75;
   }
-
 }
 
 .footer-small__content-item {
@@ -539,30 +542,30 @@
 
   }
 }
+
 .footer-small__developer {
   @include phones {
     display: block;
     font-size: 17px;
   }
 }
+
 .footer-small__my-name {
   @include phones {
     margin: 0 5px;
   }
 }
+
 .footer-small__text {
   @include phones {
     font-size: 16px;
   }
 }
+
 .footer-small__create-by {
   &:after {
     content: '|';
     margin:0 3px;
-  }
-
-  @include phones {
-
   }
 }
 
