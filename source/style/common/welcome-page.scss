@@ -574,3 +574,35 @@
     font-size: 16px;
   }
 }
+
+.error-message {
+  display: none;
+}
+
+.show-message {
+  display: block;
+  position: absolute;
+  top: 68px;
+  z-index: 1;
+  line-height: 1.5;
+  left: 43px;
+  padding: 10px 26px;
+  border-radius: 5px;
+  color: #fff;
+  background: #E34844;
+  font-weight: 700;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.9375rem 1.25rem 0.9375rem;
+    border-color: transparent transparent #E34844 transparent;
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -4,11 +4,13 @@ form.login__form
         .login__form-group
             .login__form-group-icon
                 +svg('login')
-            input.login__form-input(type='text'  placeholder='Логин')
+            input.login__form-input.login__form-input-login(type='text' placeholder='Логин')
+            span.error-message.error-message__login Вы не ввел логин
         .login__form-group
             .login__form-group-icon
                 +svg('password')
-            input.login__form-input(type='password'  placeholder='Пароль')
+            input.login__form-input.login__form-input-password(type='password'  placeholder='Пароль')
+            span.error-message.error-message__password Вы не ввели пароль
         .login__form-capcha-checkbox
             input.login__form-checkbox(type='checkbox' value='None' id="capcha-checkbox" )
             label.login__form-checkbox-text.fa.fa-check(for='capcha-checkbox')
@@ -28,4 +30,4 @@ form.login__form
 
     .login-form__buttons
         button.btn.btn-login-form.btn-return(type='button') На главную
-        button.btn.btn-login-form(type='submit') Войти
+        button.btn.btn-login-form.btn-login-form__submit(type='submit') Войти

@@ -115,5 +115,44 @@
 
     slider.init();
 
-})();
+    var validation = (function () {
+        var validtioninit = function () {
+            setListeners();
+        };
 
+        var setListeners = function() {
+            $('.btn-login-form__submit').on('click', checkForm)
+        };
+
+        var checkForm = function (e) {
+            e.preventDefault();
+            var userLogit = $('.login__form-input-login'),
+                userPassword = $('.login__form-input-password');
+
+            if (userLogit.val().length === 0) {
+                userLogit.css({'border' : "1px solid red"});
+                $('.icon__login').css({'fill': 'red'});
+                $('.error-message__login ').addClass('show-message');
+            } else {
+                userLogit.css({'border' : "1px solid #00bda5"});
+                $('.icon__login').css({'fill': '#00bda5'});
+                $('.error-message__login ').removeClass('show-message');
+            }
+
+            if (userPassword.val().length === 0) {
+                userPassword.css({'border' : "1px solid red"});
+                $('.icon__password').css({'fill': 'red'});
+                $('.error-message__password').addClass('show-message');
+            } else {
+                userPassword.css({'border' : "1px solid #00bda5"});
+                $('.icon__password').css({'fill': '#00bda5'});
+                $('.error-message__password').removeClass('show-message');
+            }
+        };
+        return {
+            init : validtioninit
+        }
+    })();
+    validation.init();
+
+})();
